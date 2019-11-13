@@ -1,0 +1,19 @@
+nav {
+  background: crimson;
+
+  ul {
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+
+      a {
+        font-size: 60px;
+        &:hover {
+          color: cyan;
+        }
+      }
+    }
+  }
+}

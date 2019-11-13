@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reem Hamoui - Project 3 Pseudo</title>
+</head>
+
+<body>
+
+    <!-- There are style and JS sheets here, but note that the project will have both sheets separated as per best practices. -->
+
+    <!-- Html here will have All relevant questions here-->
+
+    <fieldset class="question1">
+        <!-- Question #1 -->
+        <p>
+            Here is question one
+        </p>
+        <!-- Each question has 4 different multiple choice answers  -->
+        <label for="answer1">answer A</label>
+        <input type="radio" name="A" id="answer1" value="A">
+
+        <label for="answer1">answer B</label>
+        <input type="radio" name="B" id="answer1" value="B">
+
+        <label for="answer1">answer C</label>
+        <input type="radio" name="C" id="answer1" value="C">
+
+        <label for="answer1">answer D</label>
+        <input type="radio" name="D" id="answer1" value="D">
+    </fieldset>
+
+    <div class="userResult">
+        <!-- User result will be shown here based on the functions calculating the final answer taken with javascript. -->
+    </div>
+
+    <style>
+        /* I'm not sure how the styling will be, this is obviously the creative part that will be built throughout the project */
+    </style>
+
+    <script>
+        // The JS code will contain functions that will take in the answers of the questions from the HTML to show us the user's result 
+
+        $(function () {
+            //Our code goes in here
+            $('form').on('submit', function (event) {
+                event.preventDefault();
+
+                const answerOne = $('input[name="A"]:checked').val();
+
+                const answerTwo = $('input[name="A"]:checked').val();
+            })
+        })
+
+        // console.log(testResult);
+
+        // below JQuery command updates page to show the end result based on all the answers
+        $('.userResult').html(testResult);
+    </script>
+</body>
+
+</html>

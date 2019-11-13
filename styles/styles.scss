@@ -1,0 +1,18 @@
+@import "setup";
+@import "nav";
+@import "mixins";
+
+$primaryColor: wheat;
+$secondaryColor: darkcyan;
+$thirdColor: chocolate;
+
+body {
+  background: $thirdColor;
+  font-family: "Courier New", Courier, monospace;
+  color: purple;
+
+  @include mq-tablet {
+    background: pink;
+    font-size: 45px;
+  }
+}
