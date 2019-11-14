@@ -11,34 +11,67 @@
 
 <body>
     <form action=""></form>
-    <fieldset class="question1">
+    <fieldset class="seasons">
         <!-- Question #1 -->
-        <section class="firstQuestion">
-            <p>
-                Here is question one
-            </p>
-            <!-- Each question has 4 different multiple choice answers  -->
-            <!-- <label for="answerOne">answer A</label>
-            <input type="radio" name="A" id="answerOne" value="">
+        <section class="seasonsChoices">
+            <h3>
+                What season is it?
+            </h3>
 
-            <label for="answerOne">answer B</label>
-            <input type="radio" name="B" id="answerOne" value="B">
+            <input type="radio" id="summer" name="answerOne" class="seasonChosen" value="summer">
+            <label for="summer">Summer</label>
 
-            <label for="answerOne">answer C</label>
-            <input type="radio" name="C" id="answerOne" value="C">
+            <input type="radio" id="fall" name="answerOne" class="seasonChosen" value="fall">
+            <label for="fall">Fall</label>
 
-            <label for="answerOne">answer D</label>
-            <input type="radio" name="D" id="answerOne" value="D"> -->
+            <input type="radio" id="winter" name="answerOne" class="seasonChosen" value="winter">
+            <label for="winter">Winter</label>
 
-            <label for="answerOne">answer A</label>
-            <input type="radio" id="answerOne" name="answerOne">
+            <input type="radio" id="spring" name="answerOne" class="seasonChosen" value="spring">
+            <label for="spring">Spring</label>
 
-            <label for="answerOne">answer B</label>
-            <input type="radio" id="answerOne" name="answerOne">
+            <input type="submit">
+        </section>
 
     </fieldset>
+
+    <fieldset class="coffeeBases">
+        <section class="coffeeBaseChoices">
+
+
+            <h3>
+                Do you enjoy having coffee in your drink?
+            </h3>
+            <input type="radio" id="noCoffee" name="answerTwo" class="caffeineChosen" value="false">
+            <label for="noCoffee">No, I believe in being <em>caffeinated on life</em></label>
+
+            <input type="radio" id="yesCoffee" name="answerTwo" class="caffeineChosen" value="true">
+            <label for="yesCoffee">I'd rather be stressed and caffeinated at the same time</label>
+        </section>
+    </fieldset>
+
+    <fieldset class="flavour">
+        <section class="flavourChoices">
+
+            <h3>
+                Which flavour profile do you enjoy?
+            </h3>
+            <input type="radio" id="nutty" name="answerThree">
+            <label for="nutty">Nutty</label>
+
+            <input type="radio" id="earthy" name="answerThree">
+            <label for="earthy">Earthy</label>
+
+            <input type="radio" id="fruity" name="answerThree">
+            <label for="fruity">Fruity</label>
+        </section>
+    </fieldset>
+
+    <input type="submit" value="Make me Broke!">
+
+
     </form>
-    </section>
+
 
 
     <div class="userResult">

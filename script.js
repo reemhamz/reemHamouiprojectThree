@@ -181,8 +181,37 @@ const seasonalDrinks = [{
 ]
 
 console.log(seasonalDrinks)
-
+//document ready
 $(function () { //results function
-    
-    
-})
+
+    //choosing season
+    let filteredSeason = [];
+    //season filter
+    $('.seasonChosen').on('change', function () {
+        filteredSeason = seasonalDrinks.filter(function (iSeason) {
+            if ($("input[type=radio][name=answerOne]:checked").val() == iSeason.season) {
+                return true;
+            }
+        })
+        console.log("this is the NEW filtered season array", filteredSeason)
+
+    })
+    //choosing coffee base
+    $('.caffeineChosen').on('change', function () {
+        filteredCaffeine = filteredSeason.filter(function (iCaffeine) {
+
+            console.log("is the coffee true or false? :",iCaffeine.coffeeBase)
+            
+            console.log('show me the money!', $("input[type=radio][name=answerTwo][value=true]:checked").val())
+            
+            if ($("input[type=radio][name=answerTwo][value=true]:checked").val() == iCaffeine.coffeeBase) {
+                console.log('work dAMMIT!!')
+                return true;
+            }
+            
+        })
+        console.log("this is the filtered array with season and coffee", filteredCaffeine)
+    })
+    // console.log("this is filtered 2222",filteredSeason);
+
+});
