@@ -1,24 +1,45 @@
 $(document).ready(function () {
     $('input[type = radio]').attr('checked', false);
 
-    let typed = new Typed('#typed', {
-        strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.', 'I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'],
-        backSpeed: 20,
-        typeSpeed: 20
+    
 
+        
+        // landing page to show and hide everything else
+            $('.landing').show();
+        $('.mainPage').hide();
+            
+            //on button click, landing page disappears and the rest of the content shows
+            $('button').on('click', function () {
+                $('.landing').hide()
+                $('.mainPage').show()
 
-    })
+                let typed = new Typed('#typed', {
+                    strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.', 'I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'],
+                    backSpeed: 20,
+                    typeSpeed: 20,
+                    startDelay: 1000
+                })
+            })
+        
+        // $('.landing').show();
+    
 });
 
 // 
-
-
 
 //array of seasonal drinks objects
 const seasonalDrinks = [{
         name: 'Caramel Brulé Latté',
         flavourProfile: 'earthy',
         coffeeBase: true,
+        season: 'winter',
+        temperature: 'hot',
+        type: 'latté'
+},
+    {
+        name: 'Decaf Caramel Brulé Latté',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
         season: 'winter',
         temperature: 'hot',
         type: 'latté'
@@ -32,6 +53,14 @@ const seasonalDrinks = [{
         type: 'frappuccino'
     },
     {
+        name: 'Decaf Caramel Brulé Frappuccino',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'winter',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
         name: 'Chestnut Praline Latté',
         flavourProfile: 'nutty',
         coffeeBase: true,
@@ -40,9 +69,26 @@ const seasonalDrinks = [{
         type: 'latté'
     },
     {
+        name: 'Decaf Chestnut Praline Latté',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'winter',
+        temperature: 'hot',
+        type: 'latté'
+    },
+    
+    {
         name: 'Chestnut Praline Frappuccino',
         flavourProfile: 'earthy',
         coffeeBase: true,
+        season: 'winter',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
+        name: 'Decaf Chestnut Praline Frappuccino',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
         season: 'winter',
         temperature: 'cold',
         type: 'frappuccino'
@@ -62,12 +108,27 @@ const seasonalDrinks = [{
         season: 'fall',
         temperature: 'hot',
         type: 'latté'
-
+    },
+    {
+        name: 'Decaf Pumpkin Spice Latté',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'fall',
+        temperature: 'hot',
+        type: 'latté'
     },
     {
         name: 'Pumpkin Spice Frappuccino',
         flavourProfile: 'earthy',
         coffeeBase: true,
+        season: 'fall',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
+        name: 'Decaf Pumpkin Spice Frappuccino',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
         season: 'fall',
         temperature: 'cold',
         type: 'frappuccino'
@@ -81,6 +142,14 @@ const seasonalDrinks = [{
         type: 'latté'
     },
     {
+        name: 'Decaf Maple Pecan Latté',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'fall',
+        temperature: 'hot',
+        type: 'latté'
+    },
+    {
         name: 'Caramel Apple Spice',
         flavourProfile: 'fruity',
         coffeeBase: false,
@@ -89,9 +158,25 @@ const seasonalDrinks = [{
         type: 'juice'
     },
     {
+        name: 'Iced Caramel Apple Spice',
+        flavourProfile: 'fruity',
+        coffeeBase: false,
+        season: 'fall',
+        temperature: 'cold',
+        type: 'juice'
+    },
+    {
         name: 'Cinammon Dolcé Latte',
         flavourProfile: 'earthy',
         coffeeBase: true,
+        season: 'fall',
+        temperature: 'hot',
+        type: 'latté'
+    },
+    {
+        name: 'Decaf Cinammon Dolcé Latte',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
         season: 'fall',
         temperature: 'hot',
         type: 'latté'
@@ -105,11 +190,27 @@ const seasonalDrinks = [{
         type: 'frappuccino'
     },
     {
-        name: 'Chai Tea Latté',
-        flavourProfile: 'nutty',
+        name: 'Decaf Cinammon Dolce Frappuccino',
+        flavourProfile: 'earthy',
         coffeeBase: false,
         season: 'fall',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
+        name: 'Chai Tea Latté',
+        flavourProfile: 'nutty',
+        coffeeBase: true,
+        season: 'fall',
         temperature: 'hot',
+        type: 'latté'
+    },
+    {
+        name: 'Iced Chai Tea Latté',
+        flavourProfile: 'nutty',
+        coffeeBase: true,
+        season: 'fall',
+        temperature: 'cold',
         type: 'latté'
     },
     {
@@ -144,6 +245,14 @@ const seasonalDrinks = [{
         type: 'cold brew'
     },
     {
+        name: 'Decaf Sweet Dream Cold Brew',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'summer',
+        temperature: 'cold',
+        type: 'cold brew'
+    },
+    {
         name: 'Cold Brew with Salted Cream Cold Foam',
         flavourProfile: 'earthy',
         coffeeBase: true,
@@ -152,9 +261,25 @@ const seasonalDrinks = [{
         type: 'cold brew'
     },
     {
+        name: 'Decaf Cold Brew with Salted Cream Cold Foam',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'summer',
+        temperature: 'cold',
+        type: 'cold brew'
+    },
+    {
         name: 'S\'mores Frappuccino',
         flavourProfile: 'earthy',
         coffeeBase: true,
+        season: 'summer',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
+        name: 'Decaf S\'mores Frappuccino',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
         season: 'summer',
         temperature: 'cold',
         type: 'frappuccino'
@@ -192,11 +317,59 @@ const seasonalDrinks = [{
         type: 'latte'
     },
     {
+        name: 'Iced Hazelnut Mocha Macchiato',
+        flavourProfile: 'nutty',
+        coffeeBase: true,
+        season: 'spring',
+        temperature: 'cold',
+        type: 'latte'
+    },
+    {
+        name: 'Decaf Hazelnut Mocha Macchiato',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'hot',
+        type: 'latte'
+    },
+    {
+        name: 'Decaf Iced Hazelnut Mocha Macchiato',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'cold',
+        type: 'latte'
+    },
+    {
         name: 'Cinammon Macchiato',
         flavourProfile: 'earthy',
         coffeeBase: true,
         season: 'spring',
         temperature: 'hot',
+        type: 'latte'
+    },
+    {
+        name: 'Iced Cinammon Macchiato',
+        flavourProfile: 'earthy',
+        coffeeBase: true,
+        season: 'spring',
+        temperature: 'cold',
+        type: 'latte'
+    },
+    {
+        name: 'Decaf Cinammon Macchiato',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'hot',
+        type: 'latte'
+    },
+    {
+        name: 'Iced Decaf Cinammon Macchiato',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'cold',
         type: 'latte'
     },
     {
@@ -211,6 +384,14 @@ const seasonalDrinks = [{
         name: 'Cold Brew with Casara Cold Foam',
         flavourProfile: 'nutty',
         coffeeBase: true,
+        season: 'spring',
+        temperature: 'cold',
+        type: 'cold brew'
+    }, 
+    {
+        name: 'Decaf Cold Brew with Casara Cold Foam',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
         type: 'cold brew'
@@ -262,7 +443,7 @@ $(function () { //results function
 
             if (hotDrink == iTemp.temperature || coldDrink == iTemp.temperature) {
 
-                // console.log('')
+                
                 return true;
             }
             console.log('temperature array', iTemp)
@@ -270,35 +451,31 @@ $(function () { //results function
 
         })
 
-        console.log('FINAL RESULT!!! Just need to randomize it first', filteredTemp);
+        console.log('FINAL FILTERED ARRAY!!! Just need to randomize it first', filteredTemp);
 
-
+        
         //error message if you choose a hot drink within the summer season
         if ($("input[type=radio][name=answerThree][value=hot]:checked").val() && $("input[type=radio][name=answerOne][value=summer]:checked").val()) {
+
             Swal.fire({
                 title: 'Sorry! There are no hot seasonal drinks for the summer.',
                 text: 'How about you choose something else?',
                 icon: 'error',
                 confirmButtonText: 'Try again!'
+            
             })
+
             // $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
-            $('input[type=radio]').attr('checked', false)
-
-
+            $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
 
         }
-
         //randomizer function
         $("input[type=submit]").on('click', function (event) {
             let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)]
             console.log("this is the random drink", randomDrink);
             event.preventDefault();
 
-
-            //appending to html function
-            $('.userResult').html(`<p>You should have the ${randomDrink.name}!</p>`);
+            $('.userResult').html(`<p>You should have the ${randomDrink.name}!</p>`);            
         })
-
     })
-
 });

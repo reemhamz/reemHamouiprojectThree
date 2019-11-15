@@ -2,15 +2,16 @@
 // @import "colors";
 
 * {
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
 }
 
 
 h1 {
   font-size: 6.9rem;
-  font-weight: 600;
+  font-weight: 900;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 h2 {
@@ -23,6 +24,7 @@ h3 {
   font-size: 4rem;
   line-height: 58px;
   letter-spacing: 1.3px;
+  font-weight: 700;
 }
 
 h4 {
@@ -43,9 +45,13 @@ input,
 label,
 textarea,
 a,
-li {
+li, span {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
+}
+
+p, span{
+  font-weight: 400;
 }

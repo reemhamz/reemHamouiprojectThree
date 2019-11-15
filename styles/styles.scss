@@ -6,64 +6,103 @@
 $starbucksGreen: #006241;
 $white: #ffff;
 $black: #000;
-$caramel: #eac784; 
+$caramel: #eac784;
 $coffee: #362415;
+$lightcoffee: #8f4426;
 
-html{
+html {
   font-size: 62.5%;
 }
 
 body {
-  
 }
 
-.wrapper{
+.wrapper {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
 }
 
-header {
-  // background-image: url(../images/exterior.jpg);
-  // background-size: cover;
-  // background-position: center;
-  // height: 100vh;
-  text-align: center;
+.landing{
+  background-image: url(../images/exterior2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .landing-content{
+    text-align: center;
+  }
 }
 
+header {
+  background-image: url(../images/interior.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .header-content {
+    background-color: rgba(55, 28, 16, 0.8);
+    width: 60%;
+    padding: 30px;
+    // border-radius: 30px;
+    h1 {
+      
+      color: $starbucksGreen;
+    }
+    p{
+      color: $caramel;
+    }
+    span{
+      color: $caramel;
+    }
+  }
+}
 
-  .questions{
-    background-color: $starbucksGreen;
-    text-align: center;
-    color: $white;
-    form{
-      .userQuestions{
-        padding: 40px;
-        h3{
-          line-height: 0;
-          padding-bottom: 20px;
-        }
+.questions {
+  background-color: $starbucksGreen;
+  text-align: center;
+  color: $white;
+  // padding: 80px;
+
+  form {
+    padding: 80px 0;
+
+    .userQuestions {
+      padding: 40px;
+      h3 {
+        line-height: 0;
+        padding-bottom: 20px;
+        color: $caramel;
+        text-shadow: 4px 4px $coffee;
       }
     }
   }
+}
 
-  input[type=radio]{
-    visibility: hidden;
-  }
+input[type="radio"] {
+  visibility: hidden;
+}
 
-  input[type=radio]:checked+label{
-    background-color: $white;
-    color: $starbucksGreen;
-    transition: 0.3s;
-  }
+input[type="radio"]:checked + label {
+  background-color: $lightcoffee;
+  color: $coffee;
+  transition: 0.3s;
+}
 
-  label{
-    // background-color:$white;
-    border: 1px solid $white;
-    padding: 10px;
-    border-radius: 10px;
-  }
+label {
+  // background-color:$white;
+  border: 1px solid $white;
+  padding: 10px;
+  border-radius: 10px;
+}
 
-
-
-
+.userResult {
+  text-align: center;
+}
