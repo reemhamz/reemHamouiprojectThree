@@ -1,7 +1,10 @@
-// $(document).ready(function () {
+$(document).ready(function () {
+    $('input[type = radio]').attr('checked', false);
+});
 
-// })
+// 
 
+//array of seasonal drinks objects
 const seasonalDrinks = [{
         name: 'Caramel Brulé Latté',
         flavourProfile: 'earthy',
@@ -46,7 +49,7 @@ const seasonalDrinks = [{
         name: 'Pumpkin Spice Latté',
         flavourProfile: 'earthy',
         coffeeBase: true,
-        season: 'winter',
+        season: 'fall',
         temperature: 'hot',
         type: 'latté'
 
@@ -57,14 +60,6 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'fall',
         temperature: 'cold',
-        type: 'frappuccino'
-    },
-    {
-        name: 'Pumpkin Spice Frappuccino',
-        flavourProfile: 'nutty',
-        coffeeBase: true,
-        season: 'fall',
-        temperature: 'hot',
         type: 'frappuccino'
     },
     {
@@ -98,6 +93,14 @@ const seasonalDrinks = [{
         season: 'fall',
         temperature: 'cold',
         type: 'frappuccino'
+    },
+    {
+        name: 'Chai Tea Latté',
+        flavourProfile: 'nutty',
+        coffeeBase: false,
+        season: 'fall',
+        temperature: 'hot',
+        type: 'latté'
     },
     {
         name: 'Tie Dye Frappuccino',
@@ -139,12 +142,20 @@ const seasonalDrinks = [{
         type: 'cold brew'
     },
     {
-        name: 'S-mores Frappuccino',
+        name: 'S\'mores Frappuccino',
         flavourProfile: 'earthy',
         coffeeBase: true,
         season: 'summer',
         temperature: 'cold',
         type: 'frappuccino'
+    },
+    {
+        name: 'Matcha Latté',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'summer',
+        temperature: 'hot',
+        type: 'latte'
     },
     {
         name: 'Hazelnut Mocha Macchiato',
@@ -193,25 +204,69 @@ $(function () { //results function
                 return true;
             }
         })
-        console.log("this is the NEW filtered season array", filteredSeason)
+        console.log("this is the filtered season array", filteredSeason)
 
     })
+
     //choosing coffee base
     $('.caffeineChosen').on('change', function () {
         filteredCaffeine = filteredSeason.filter(function (iCaffeine) {
 
-            console.log("is the coffee true or false? :",iCaffeine.coffeeBase)
-            
-            console.log('show me the money!', $("input[type=radio][name=answerTwo][value=true]:checked").val())
-            
-            if ($("input[type=radio][name=answerTwo][value=true]:checked").val() == iCaffeine.coffeeBase) {
-                console.log('work dAMMIT!!')
+            const trueCoffee = $("input[type=radio][name=answerTwo][value=true]:checked").val() == 'true';
+
+            const falseCoffee = $("input[type=radio][name=answerTwo][value=false]:checked").val() == 'false';
+
+            console.log("this is the TRUE COFFEE", trueCoffee)
+
+            if (trueCoffee === iCaffeine.coffeeBase) {
+
                 return true;
             }
-            
+
+            console.log('this is caffeine-choice array', iCaffeine);
         })
         console.log("this is the filtered array with season and coffee", filteredCaffeine)
     })
-    // console.log("this is filtered 2222",filteredSeason);
+
+    $('.tempChosen').on('click', function () {
+        filteredTemp = filteredCaffeine.filter(function (iTemp) {
+
+            const hotDrink = $("input[type=radio][name=answerThree][value=hot]:checked").val();
+            const coldDrink = $("input[type=radio][name=answerThree][value=cold]:checked").val();
+
+            if (hotDrink == iTemp.temperature || coldDrink == iTemp.temperature) {
+
+                // console.log('')
+                return true;
+            }
+            console.log('temperature array', iTemp)
+
+
+        })
+
+        console.log('FINAL RESULT!!! Just need to randomize it first', filteredTemp);
+
+
+        //error message if you choose a hot drink within the summer season
+        if ($("input[type=radio][name=answerThree][value=hot]:checked").val() && $("input[type=radio][name=answerOne][value=summer]:checked").val()) {
+            Swal.fire({
+                title: 'Sorry! There are no hot seasonal drinks for the summer.',
+                text: 'How about you choose something else?',
+                icon: 'error',
+                confirmButtonText: 'Try again!'
+            })
+        }
+
+        //randomizer function
+        $("input[type=submit]").on('click', function () {
+            let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)]
+
+            console.log("this is the random drink", randomDrink);
+
+            //appending to html function
+            $('.userResult').append(`<p>You should have the ${randomDrink.name}!</p>`);
+        })
+
+    })
 
 });

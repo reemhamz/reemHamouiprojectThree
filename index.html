@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <title>Document</title>
 </head>
 
@@ -29,8 +30,6 @@
 
             <input type="radio" id="spring" name="answerOne" class="seasonChosen" value="spring">
             <label for="spring">Spring</label>
-
-            <input type="submit">
         </section>
 
     </fieldset>
@@ -49,21 +48,17 @@
             <label for="yesCoffee">I'd rather be stressed and caffeinated at the same time</label>
         </section>
     </fieldset>
-
     <fieldset class="flavour">
         <section class="flavourChoices">
 
             <h3>
-                Which flavour profile do you enjoy?
+                Would you like to have a hot or cold drink?
             </h3>
-            <input type="radio" id="nutty" name="answerThree">
-            <label for="nutty">Nutty</label>
+            <input type="radio" id="hot" name="answerThree" class="tempChosen" value="hot">
+            <label for="hot">I havent burnt my tongue in a <em>hot</em> minute</label>
 
-            <input type="radio" id="earthy" name="answerThree">
-            <label for="earthy">Earthy</label>
-
-            <input type="radio" id="fruity" name="answerThree">
-            <label for="fruity">Fruity</label>
+            <input type="radio" id="cold" name="answerThree" class="tempChosen" value="cold">
+            <label for="cold">I'll take the risk of having a brain freeze!</label>
         </section>
     </fieldset>
 
@@ -80,6 +75,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="script.js"></script>
+    
 </body>
 
 </html>
