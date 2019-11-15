@@ -1,8 +1,18 @@
 $(document).ready(function () {
     $('input[type = radio]').attr('checked', false);
+
+    let typed = new Typed('#typed', {
+        strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.','I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'], 
+        backSpeed: 20,
+        typeSpeed: 20
+
+        
+    })
 });
 
 // 
+
+
 
 //array of seasonal drinks objects
 const seasonalDrinks = [{
@@ -153,7 +163,7 @@ const seasonalDrinks = [{
         name: 'Matcha Latté',
         flavourProfile: 'earthy',
         coffeeBase: false,
-        season: 'summer',
+        season: 'spring',
         temperature: 'hot',
         type: 'latte'
     },
@@ -255,6 +265,11 @@ $(function () { //results function
                 icon: 'error',
                 confirmButtonText: 'Try again!'
             })
+            // $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
+            $('input[type=radio]').attr('checked', false)
+
+            
+            filteredTemp =filteredTemp.splice(0);
         }
 
         //randomizer function
@@ -264,7 +279,7 @@ $(function () { //results function
             console.log("this is the random drink", randomDrink);
 
             //appending to html function
-            $('.userResult').append(`<p>You should have the ${randomDrink.name}!</p>`);
+            $('.userResult').html(`<p>You should have the ${randomDrink.name}!</p>`);
         })
 
     })

@@ -1,18 +1,32 @@
-@import "setup";
-@import "nav";
-@import "mixins";
+@import "partials/setup";
+@import "partials/nav";
+@import "partials/mixins";
 
-$primaryColor: wheat;
-$secondaryColor: darkcyan;
-$thirdColor: chocolate;
+$starbucksGreen: #006241;
+$white: #ffff;
+$black: #000;
+$caramel: #eac784; 
+$coffee: #362415;
+
+html{
+  font-size: 62.5%;
+}
 
 body {
-  background: $thirdColor;
-  font-family: "Courier New", Courier, monospace;
-  color: purple;
-
-  @include mq-tablet {
-    background: pink;
-    font-size: 45px;
-  }
+  
 }
+
+header {
+  // background-image: url(../images/exterior.jpg);
+  // background-size: cover;
+  // background-position: center;
+  // height: 100vh;
+}
+
+
+  .questions{
+    background-color: $starbucksGreen;
+    text-align: center;
+    color: $white;
+  }
+
