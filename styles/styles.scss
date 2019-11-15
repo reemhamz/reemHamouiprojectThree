@@ -1,6 +1,7 @@
 @import "partials/setup";
 @import "partials/nav";
 @import "partials/mixins";
+@import "partials/fonts";
 
 $starbucksGreen: #006241;
 $white: #ffff;
@@ -16,11 +17,18 @@ body {
   
 }
 
+.wrapper{
+  max-width: 1240px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 header {
   // background-image: url(../images/exterior.jpg);
   // background-size: cover;
   // background-position: center;
   // height: 100vh;
+  text-align: center;
 }
 
 
@@ -28,5 +36,34 @@ header {
     background-color: $starbucksGreen;
     text-align: center;
     color: $white;
+    form{
+      .userQuestions{
+        padding: 40px;
+        h3{
+          line-height: 0;
+          padding-bottom: 20px;
+        }
+      }
+    }
   }
+
+  input[type=radio]{
+    visibility: hidden;
+  }
+
+  input[type=radio]:checked+label{
+    background-color: $white;
+    color: $starbucksGreen;
+    transition: 0.3s;
+  }
+
+  label{
+    // background-color:$white;
+    border: 1px solid $white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+
+
 

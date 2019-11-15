@@ -13,75 +13,81 @@
 
 <body>
     <header>
-        <h1>
-            Welcome to Starbucks
-        </h1>
+        <div class="header-content wrapper">
+            <h1>
+                Welcome to Starbucks
+            </h1>
+            <div class="typedStrings">
+                <p>This is me using typed.js</p>
+                <span id="typed"></span>
+            </div>
+        </div>
+
     </header>
-    <div class="typedStrings">
-        <p>This is me using typed.js</p>
-        <span id="typed"></span>
-    </div>
-
-    <section class="questions">
-    <form action=""></form>
-    
-    <fieldset class="seasons">
-        
-        
-        <!-- Question #1 -->
-        <div class="seasonsChoices">
-            <h3>
-                What season is it?
-            </h3>
-
-            <input type="radio" id="summer" name="answerOne" class="seasonChosen" value="summer">
-            <label for="summer">Summer</label>
-
-            <input type="radio" id="fall" name="answerOne" class="seasonChosen" value="fall">
-            <label for="fall">Fall</label>
-
-            <input type="radio" id="winter" name="answerOne" class="seasonChosen" value="winter">
-            <label for="winter">Winter</label>
-
-            <input type="radio" id="spring" name="answerOne" class="seasonChosen" value="spring">
-            <label for="spring">Spring</label>
-        </div>
-
-    </fieldset>
-
-    <fieldset class="coffeeBases">
-        <div class="coffeeBaseChoices">
 
 
-            <h3>
-                Do you enjoy having coffee in your drink?
-            </h3>
-            <input type="radio" id="noCoffee" name="answerTwo" class="caffeineChosen" value="false">
-            <label for="noCoffee">No, I believe in being <em>caffeinated on life</em></label>
 
-            <input type="radio" id="yesCoffee" name="answerTwo" class="caffeineChosen" value="true">
-            <label for="yesCoffee">I'd rather be stressed and caffeinated at the same time</label>
-        </div>
-    </fieldset>
-    <fieldset class="flavour">
-        <div class="flavourChoices">
+    <section class="questions ">
 
-            <h3>
-                Would you like to have a hot or cold drink?
-            </h3>
-            <input type="radio" id="hot" name="answerThree" class="tempChosen" value="hot">
-            <label for="hot">I havent burnt my tongue in a <em>hot</em> minute</label>
+        <form action="" class="wrapper">
 
-            <input type="radio" id="cold" name="answerThree" class="tempChosen" value="cold">
-            <label for="cold">I'll take the risk of having a brain freeze!</label>
-        </div>
-    </fieldset>
+            <fieldset class="seasons">
 
-    <input type="submit" value="Make me Broke!">
+                <!-- Question #1 -->
+                <div class="seasonsChoices userQuestions">
+                    <h3>
+                        What season is it?
+                    </h3>
+
+                    <input type="radio" id="summer" name="answerOne" class="seasonChosen" value="summer">
+                    <label for="summer">Summer</label>
+
+                    <input type="radio" id="fall" name="answerOne" class="seasonChosen" value="fall">
+                    <label for="fall">Fall</label>
+
+                    <input type="radio" id="winter" name="answerOne" class="seasonChosen" value="winter">
+                    <label for="winter">Winter</label>
+
+                    <input type="radio" id="spring" name="answerOne" class="seasonChosen" value="spring">
+                    <label for="spring">Spring</label>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="coffeeBases">
+                <div class="coffeeBaseChoices userQuestions">
 
 
-    </form>
-    </section> <!--End of questions-->
+                    <h3>
+                        Do you enjoy having coffee in your drink?
+                    </h3>
+                    <input type="radio" id="noCoffee" name="answerTwo" class="caffeineChosen" value="false">
+                    <label for="noCoffee">No, I believe in being <em>caffeinated on life</em></label>
+
+                    <input type="radio" id="yesCoffee" name="answerTwo" class="caffeineChosen" value="true">
+                    <label for="yesCoffee">I'd rather be stressed and caffeinated at the same time</label>
+                </div>
+            </fieldset>
+            <fieldset class="flavour">
+                <div class="flavourChoices userQuestions">
+
+                    <h3>
+                        Would you like to have a hot or cold drink?
+                    </h3>
+                    <input type="radio" id="hot" name="answerThree" class="tempChosen" value="hot">
+                    <label for="hot">I havent burnt my tongue in a <em>hot</em> minute</label>
+
+                    <input type="radio" id="cold" name="answerThree" class="tempChosen" value="cold">
+                    <label for="cold">I'll take the risk of having a brain freeze!</label>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Make me Broke!">
+
+
+        </form>
+    </section>
+    <!--End of questions-->
 
 
 
@@ -91,7 +97,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>

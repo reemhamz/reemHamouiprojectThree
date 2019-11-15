@@ -2,11 +2,11 @@ $(document).ready(function () {
     $('input[type = radio]').attr('checked', false);
 
     let typed = new Typed('#typed', {
-        strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.','I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'], 
+        strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.', 'I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'],
         backSpeed: 20,
         typeSpeed: 20
 
-        
+
     })
 });
 
@@ -160,11 +160,27 @@ const seasonalDrinks = [{
         type: 'frappuccino'
     },
     {
-        name: 'Matcha Latté',
+        name: 'Matcha Green Tea Latté',
         flavourProfile: 'earthy',
         coffeeBase: false,
         season: 'spring',
         temperature: 'hot',
+        type: 'latte'
+    },
+    {
+        name: 'Matcha Green Tea Frappuccino',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'cold',
+        type: 'frappuccino'
+    },
+    {
+        name: 'Matcha Green Tea Iced Latté',
+        flavourProfile: 'earthy',
+        coffeeBase: false,
+        season: 'spring',
+        temperature: 'cold',
         type: 'latte'
     },
     {
@@ -268,15 +284,16 @@ $(function () { //results function
             // $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
             $('input[type=radio]').attr('checked', false)
 
-            
-            filteredTemp =filteredTemp.splice(0);
+
+
         }
 
         //randomizer function
-        $("input[type=submit]").on('click', function () {
+        $("input[type=submit]").on('click', function (event) {
             let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)]
-
             console.log("this is the random drink", randomDrink);
+            event.preventDefault();
+
 
             //appending to html function
             $('.userResult').html(`<p>You should have the ${randomDrink.name}!</p>`);
