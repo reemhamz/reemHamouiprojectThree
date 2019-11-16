@@ -2,13 +2,7 @@
 @import "partials/nav";
 @import "partials/mixins";
 @import "partials/fonts";
-
-$starbucksGreen: #006241;
-$white: #ffff;
-$black: #000;
-$caramel: #eac784;
-$coffee: #362415;
-$lightcoffee: #8f4426;
+@import "partials/colors";
 
 html {
   font-size: 62.5%;
@@ -23,7 +17,7 @@ body {
   margin: 0 auto;
 }
 
-.landing{
+.landing {
   background-image: url(../images/exterior6.jpg);
   background-size: cover;
   background-position: center;
@@ -31,7 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .landing-content{
+  .landing-content {
     text-align: center;
   }
 }
@@ -53,26 +47,36 @@ header {
     width: 80%;
     padding: 30px;
     h1 {
-      
       color: $starbucksGreen;
     }
-    p{
-      color: $lightcoffee;
+    p {
+      color: $lightCoffee;
     }
-    span{
-      color: $lightcoffee;
+    span {
+      color: $lightCoffee;
     }
   }
 }
 
 .questions {
-  background-color: $starbucksGreen;
+  background-color: $coffee;
   text-align: center;
   color: $white;
+  background-image: url(../images/coffee-bg2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  // padding: 80px 0;
+  .drinkQuestions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+  }
+
   // padding: 80px;
 
   form {
-    padding: 80px 0;
     border-radius: 5px;
     .userQuestions {
       padding: 40px;
@@ -86,23 +90,35 @@ header {
   }
 }
 
-form{
-  fieldset{
-    border-radius: 5px;
+form {
+  fieldset {
+    margin: 0 auto;
+    border-radius: 20px;
+    border-style: none;
+    background-color: $starbucksGreen;
+    width: 80%;
+
+    .userQuestions {
+      h3 {
+        width: 100%;
+      }
+      .userChoices {
+        width: 100%;
+      }
+    }
   }
 }
 
 input[type="radio"] {
   visibility: hidden;
+  // width: 50%;
 }
 
-
-
 label {
-  // background-color:$white;
   border: 1px solid $white;
   padding: 10px;
   border-radius: 5px;
+  // width: 50%;
 }
 
 input[type="radio"]:checked + label {
@@ -110,10 +126,26 @@ input[type="radio"]:checked + label {
   color: $white;
   border-color: $coffee;
   transition: 0.5s;
-  
-
 }
 
 .userResult {
   text-align: center;
+}
+
+input[type="submit"] {
+  // margin: 30px 0;
+  padding: 30px;
+  background-color: rgba(204, 199, 192, 0.9);
+  // border: 5px solid $starbucksGreen;
+  border-style: none;
+  color: $starbucksGreen;
+  text-shadow: 4px 4px $caramel;
+  box-shadow: 5px 5px 0px 0px $starbucksGreen;
+
+  &:hover {
+    color: $coffee;
+    transition: 0.5s;
+    border-color: $lightCoffee;
+    text-shadow: 4px 4px $caramel;
+  }
 }
