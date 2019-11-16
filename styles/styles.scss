@@ -48,8 +48,9 @@ header {
   flex-direction: column;
   justify-content: center;
   .header-content {
-    background-color: rgba(55, 28, 16, 0.8);
-    width: 60%;
+    background-color: rgba(243, 244, 242, 0.7);
+    border-radius: 5px;
+    width: 80%;
     padding: 30px;
     // border-radius: 30px;
     h1 {
@@ -57,10 +58,10 @@ header {
       color: $starbucksGreen;
     }
     p{
-      color: $caramel;
+      color: $lightcoffee;
     }
     span{
-      color: $caramel;
+      color: $lightcoffee;
     }
   }
 }
@@ -73,7 +74,7 @@ header {
 
   form {
     padding: 80px 0;
-
+    border-radius: 5px;
     .userQuestions {
       padding: 40px;
       h3 {
@@ -86,21 +87,32 @@ header {
   }
 }
 
+form{
+  fieldset{
+    border-radius: 5px;
+  }
+}
+
 input[type="radio"] {
   visibility: hidden;
 }
 
-input[type="radio"]:checked + label {
-  background-color: $lightcoffee;
-  color: $coffee;
-  transition: 0.3s;
-}
+
 
 label {
   // background-color:$white;
   border: 1px solid $white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: $coffee;
+  color: $white;
+  border-color: $coffee;
+  transition: 0.5s;
+  
+
 }
 
 .userResult {

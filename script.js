@@ -10,14 +10,14 @@ $(document).ready(function () {
             
             //on button click, landing page disappears and the rest of the content shows
             $('button').on('click', function () {
-                $('.landing').hide()
+                $('.landing').hide(1000)
                 $('.mainPage').show()
 
                 let typed = new Typed('#typed', {
                     strings: ['Hello, and welcome to Starbucks!', 'We\'re currently serving seasonal drinks.', 'I can help you narrow down a few options, if you\'d like!', 'Just press the start button and we can get the coffee grinding while we narrow down your options.'],
                     backSpeed: 20,
                     typeSpeed: 20,
-                    startDelay: 1000
+                    startDelay: 2000
                 })
             })
         
