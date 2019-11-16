@@ -31,21 +31,31 @@ body {
 }
 
 header {
-  background-image: url(../images/interior.jpg);
+  background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 100vh;
   text-align: center;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
+  position: relative;
   .header-content {
-    background-color: rgba(243, 244, 242, 0.7);
+    background-image: url(../images/bubble.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    // background-color: rgba(243, 244, 242, 0.7);
     border-radius: 5px;
-    width: 80%;
-    padding: 30px;
+    width: 50%;
+    padding: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
     h1 {
       color: $starbucksGreen;
     }
@@ -62,11 +72,11 @@ header {
   background-color: $coffee;
   text-align: center;
   color: $white;
-  background-image: url(../images/coffee-bg2.jpg);
+  background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
   height: 1000px;
-  // padding: 80px 0;
+  padding: 80px 0;
   .drinkQuestions {
     display: flex;
     flex-direction: column;
@@ -132,20 +142,22 @@ input[type="radio"]:checked + label {
   text-align: center;
 }
 
-input[type="submit"] {
-  // margin: 30px 0;
-  padding: 30px;
-  background-color: rgba(204, 199, 192, 0.9);
-  // border: 5px solid $starbucksGreen;
-  border-style: none;
-  color: $starbucksGreen;
-  text-shadow: 4px 4px $caramel;
-  box-shadow: 5px 5px 0px 0px $starbucksGreen;
-
-  &:hover {
-    color: $coffee;
-    transition: 0.5s;
-    border-color: $lightCoffee;
+.getCoffee {
+  margin: 50px 0;
+    // padding: 90px;
+  input[type="submit"] {
+    background-color: rgba(204, 199, 192, 0.9);
+    // border: 5px solid $starbucksGreen;
+    border-style: none;
+    color: $starbucksGreen;
     text-shadow: 4px 4px $caramel;
+    box-shadow: 5px 5px 0px 0px $starbucksGreen;
+
+    &:hover {
+      color: $coffee;
+      transition: 0.5s;
+      border-color: $lightCoffee;
+      text-shadow: 4px 4px $caramel;
+    }
   }
 }

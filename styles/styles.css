@@ -283,10 +283,10 @@ html {
 }
 
 header {
-  background-image: url(../images/interior.jpg);
+  background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
-  height: 70vh;
+  height: 100vh;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -300,13 +300,24 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
 }
 
 header .header-content {
-  background-color: rgba(243, 244, 242, 0.7);
+  background-image: url(../images/bubble.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
   border-radius: 5px;
-  width: 80%;
-  padding: 30px;
+  width: 50%;
+  padding: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 header .header-content h1 {
@@ -325,10 +336,11 @@ header .header-content span {
   background-color: #362415;
   text-align: center;
   color: #ffff;
-  background-image: url(../images/coffee-bg2.jpg);
+  background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
   height: 1000px;
+  padding: 80px 0;
 }
 
 .questions .drinkQuestions {
@@ -398,8 +410,11 @@ input[type="radio"]:checked + label {
   text-align: center;
 }
 
-input[type="submit"] {
-  padding: 30px;
+.getCoffee {
+  margin: 50px 0;
+}
+
+.getCoffee input[type="submit"] {
   background-color: rgba(204, 199, 192, 0.9);
   border-style: none;
   color: #006241;
@@ -408,7 +423,7 @@ input[type="submit"] {
           box-shadow: 5px 5px 0px 0px #006241;
 }
 
-input[type="submit"]:hover {
+.getCoffee input[type="submit"]:hover {
   color: #362415;
   -webkit-transition: 0.5s;
   transition: 0.5s;
