@@ -5,16 +5,16 @@ $(document).ready(function () {
 
         
         // // landing page to show and hide everything else
-            $('.landing').show();
-        $('.mainPage').hide();
+        //     $('.landing').show();
+        // $('.mainPage').hide();
             
-            //on button click, landing page disappears and the rest of the content shows
-            $('button').on('click', function () {
-                $('.landing').hide(1000)
-                $('.mainPage').show()
+        //     //on button click, landing page disappears and the rest of the content shows
+        //     $('button').on('click', function () {
+        //         $('.landing').hide(1000)
+        //         $('.mainPage').show()
 
                 let typed = new Typed('#typed', {
-                    strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options.', 'Just press button button below and we\'ll get right to it!'],
+                    strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the button below.'],
                     backSpeed: 20,
                     typeSpeed: 20,
                     startDelay: 2000
@@ -23,13 +23,13 @@ $(document).ready(function () {
     
         
     // $('.landing').show(); 
-    $('#start').on('click', function () {
-        $('html, body').animate({
-            scrollTop: $('.questions'). offset().top
-        },1000)
-    })
+    // $('#start').on('click', function () {
+    //     $('html, body').animate({
+    //         scrollTop: $('.questions'). offset().top
+    //     },1000)
+    // })
     
-});
+// });
 
 // 
 

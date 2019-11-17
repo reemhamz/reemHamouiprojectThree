@@ -78,7 +78,7 @@ html {
       background-position: top;
       height: 80vh;
       width: 50%;
-      padding-top: 70px;
+      padding-top: 60px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -87,9 +87,12 @@ html {
       }
       p {
         color: $lightCoffee;
+        text-shadow: 2px 2px $black;
+
       }
       span {
         color: $lightCoffee;
+        // text-shadow: 2px 2px $white;
       }
     }
   }
@@ -181,15 +184,24 @@ input[type="radio"]:checked + label {
     background-color: rgba(204, 199, 192, 0.9);
     // border: 5px solid $starbucksGreen;
     border-style: none;
-    color: $starbucksGreen;
-    text-shadow: 4px 4px $caramel;
-    box-shadow: 5px 5px 0px 0px $starbucksGreen;
+    color: $lightGreen;
+    text-shadow: 4px 4px $starbucksGreen;
+    box-shadow: 15px 15px 0px 0px $starbucksGreen;
+    padding: 30px;
 
     &:hover {
-      color: $coffee;
-      transition: 0.5s;
+      // color: $caramel;
+      transition: 0.3s;
       border-color: $lightCoffee;
-      text-shadow: 4px 4px $caramel;
+      text-shadow: 4px 4px $lightCoffee;
+      box-shadow: 15px 15px 0px 0px $lightCoffee;
     }
   }
+}
+
+input[type="text"]{
+  width: 50%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 0;
 }

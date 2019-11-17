@@ -237,13 +237,11 @@ button {
   padding-top: 10px;
 }
 
-p,
-label,
 textarea,
 a,
 li,
-span {
-  font-family: "Barlow", sans-serif;
+span, input, label {
+  font-family: "Varela Round", sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
@@ -256,13 +254,11 @@ em, button {
 
 .headerContent .typedStrings span {
   font-size: 3rem;
-  color: blue;
   font-family: "Varela Round", sans-serif;
 }
 
 .headerContent .typedStrings p {
   font-size: 4rem;
-  color: black;
   font-family: "Varela Round", sans-serif;
   font-weight: 700;
 }
@@ -356,7 +352,7 @@ html {
   background-position: top;
   height: 80vh;
   width: 50%;
-  padding-top: 70px;
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,6 +371,7 @@ html {
 
 .mainPage header .headerContent p {
   color: #8f4426;
+  text-shadow: 2px 2px #000;
 }
 
 .mainPage header .headerContent span {
@@ -475,17 +472,26 @@ input[type="radio"]:checked + label {
 .getCoffee input[type="submit"] {
   background-color: rgba(204, 199, 192, 0.9);
   border-style: none;
-  color: #006241;
-  text-shadow: 4px 4px #eac784;
-  -webkit-box-shadow: 5px 5px 0px 0px #006241;
-          box-shadow: 5px 5px 0px 0px #006241;
+  color: #71a95a;
+  text-shadow: 4px 4px #006241;
+  -webkit-box-shadow: 15px 15px 0px 0px #006241;
+          box-shadow: 15px 15px 0px 0px #006241;
+  padding: 30px;
 }
 
 .getCoffee input[type="submit"]:hover {
-  color: #362415;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-color: #8f4426;
-  text-shadow: 4px 4px #eac784;
+  text-shadow: 4px 4px #8f4426;
+  -webkit-box-shadow: 15px 15px 0px 0px #8f4426;
+          box-shadow: 15px 15px 0px 0px #8f4426;
+}
+
+input[type="text"] {
+  width: 50%;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 0;
 }
 /*# sourceMappingURL=styles.css.map */

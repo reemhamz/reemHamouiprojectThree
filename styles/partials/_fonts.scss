@@ -39,13 +39,11 @@ button {
   padding-top: 10px;
 }
 
-p,
-label,
 textarea,
 a,
 li,
-span {
-  font-family: "Barlow", sans-serif;
+span, input, label {
+  font-family: "Varela Round", sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
@@ -61,12 +59,10 @@ em, button {
   .typedStrings {
     span {
       font-size: 3rem;
-      color: blue;
       font-family: "Varela Round", sans-serif;
     }
     p {
       font-size: 4rem;
-      color: black;
       font-family: "Varela Round", sans-serif;
       font-weight: 700;
     }
