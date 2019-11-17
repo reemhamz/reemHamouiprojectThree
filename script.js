@@ -1,35 +1,35 @@
 $(document).ready(function () {
     $('input[type = radio]').attr('checked', false);
 
-    
 
-        
-        // // landing page to show and hide everything else
-        //     $('.landing').show();
-        // $('.mainPage').hide();
-            
-        //     //on button click, landing page disappears and the rest of the content shows
-        //     $('button').on('click', function () {
-        //         $('.landing').hide(1000)
-        //         $('.mainPage').show()
 
-                let typed = new Typed('#typed', {
-                    strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the button below.'],
-                    backSpeed: 20,
-                    typeSpeed: 20,
-                    startDelay: 2000
-                })
-            })
-    
-        
+
+    // // landing page to show and hide everything else
+    // $('.landing').show();
+    // $('.mainPage').hide();
+
+    //on button click, landing page disappears and the rest of the content shows
+    $('button').on('click', function () {
+        $('.landing').hide(1000)
+        $('.mainPage').show()
+
+        let typed = new Typed('#typed', {
+            strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the button below.'],
+            backSpeed: 20,
+            typeSpeed: 20,
+            startDelay: 2000
+        })
+    })
+
+
     // $('.landing').show(); 
-    // $('#start').on('click', function () {
-    //     $('html, body').animate({
-    //         scrollTop: $('.questions'). offset().top
-    //     },1000)
-    // })
-    
-// });
+    $('#start').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('.questions').offset().top
+        }, 1000)
+    })
+
+});
 
 // 
 
@@ -41,7 +41,7 @@ const seasonalDrinks = [{
         season: 'winter',
         temperature: 'hot',
         type: 'latté'
-},
+    },
     {
         name: 'Decaf Caramel Brulé Latté',
         flavourProfile: 'earthy',
@@ -82,7 +82,7 @@ const seasonalDrinks = [{
         temperature: 'hot',
         type: 'latté'
     },
-    
+
     {
         name: 'Chestnut Praline Frappuccino',
         flavourProfile: 'earthy',
@@ -393,7 +393,7 @@ const seasonalDrinks = [{
         season: 'spring',
         temperature: 'cold',
         type: 'cold brew'
-    }, 
+    },
     {
         name: 'Decaf Cold Brew with Casara Cold Foam',
         flavourProfile: 'nutty',
@@ -449,7 +449,7 @@ $(function () { //results function
 
             if (hotDrink == iTemp.temperature || coldDrink == iTemp.temperature) {
 
-                
+
                 return true;
             }
             console.log('temperature array', iTemp)
@@ -459,7 +459,7 @@ $(function () { //results function
 
         console.log('FINAL FILTERED ARRAY!!! Just need to randomize it first', filteredTemp);
 
-        
+
         //error message if you choose a hot drink within the summer season
         if ($("input[type=radio][name=answerThree][value=hot]:checked").val() && $("input[type=radio][name=answerOne][value=summer]:checked").val()) {
 
@@ -468,7 +468,7 @@ $(function () { //results function
                 text: 'How about you choose something else?',
                 icon: 'error',
                 confirmButtonText: 'Try again!'
-            
+
             })
 
             // $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
@@ -481,7 +481,13 @@ $(function () { //results function
             console.log("this is the random drink", randomDrink);
             event.preventDefault();
 
-            $('.userResult').html(`<p>You should have the ${randomDrink.name}!</p>`);            
+            $('.resultContent').html(`<h3>You should have 
+            the ${randomDrink.name}</h3>`);
+
+            let userName = $('input[type=text][name=answerFour]').val();
+            console.log('this is the customer name',userName)
+            
+            $('.resultImage').html(`<p>${userName}</p>`);
         })
     })
 });

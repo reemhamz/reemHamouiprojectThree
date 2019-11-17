@@ -1,5 +1,19 @@
-@mixin mq-tablet{
-    @media (max-width: 800px){
+
+@mixin mqTablet{
+    @media (max-width: 1000px){
+        @content;
+    }
+}
+
+@mixin mqBigPhone{
+    @media(max-width:680px){
+        @content;
+    }
+}
+
+@mixin mqSmallPhone{
+
+    @media(max-width: 550px){
         @content;
     }
 }
