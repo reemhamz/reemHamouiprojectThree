@@ -201,7 +201,7 @@ nav ul li a:hover {
 }
 
 * {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1 {
@@ -211,7 +211,8 @@ h1 {
   margin-top: 0;
 }
 
-h2, input[type=submit] {
+h2,
+input[type="submit"] {
   font-size: 4.5rem;
   font-weight: 900;
 }
@@ -240,15 +241,30 @@ p,
 label,
 textarea,
 a,
-li, span {
+li,
+span {
   font-family: "Barlow", sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
 }
 
-label, em {
-  font-weight: 200;
+label,
+em, button {
+  font-family: "Varela Round", sans-serif;
+}
+
+.headerContent .typedStrings span {
+  font-size: 3rem;
+  color: blue;
+  font-family: "Varela Round", sans-serif;
+}
+
+.headerContent .typedStrings p {
+  font-size: 4rem;
+  color: black;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
 }
 
 html {
@@ -282,14 +298,16 @@ html {
   text-align: center;
 }
 
-header {
+.mainPage header .wrapper {
+  margin: 0;
+}
+
+.mainPage header {
   background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
   text-align: center;
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,39 +315,74 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  position: relative;
 }
 
-header .header-content {
-  background-image: url(../images/bubble.png);
+.mainPage header .headerContent {
+  background-image: url(../images/bubble3.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   height: 80vh;
-  border-radius: 5px;
   width: 50%;
-  padding: 100px;
-  position: absolute;
-  right: 0;
-  top: 0;
+  padding-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-header .header-content h1 {
+.mainPage header .headerContent h1 {
   color: #006241;
 }
 
-header .header-content p {
+.mainPage header .headerContent p {
   color: #8f4426;
 }
 
-header .header-content span {
+.mainPage header .headerContent span {
   color: #8f4426;
+}
+
+.mainPage .headerContent .typedStrings {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.mainPage .headerContent .typedStrings span {
+  line-height: normal;
+}
+
+.mainPage .headerContent .start {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #006241;
+  border: 2px solid #ffff;
+  color: #ffff;
+}
+
+.mainPage .headerContent .start:hover {
+  border: 5px solid #ffff;
+  font-size: 3rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.mainPage .headerContent .start:hover::after {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .questions {
@@ -377,7 +430,7 @@ form fieldset {
   border-radius: 20px;
   border-style: none;
   background-color: #006241;
-  width: 80%;
+  width: 90%;
 }
 
 form fieldset .userQuestions h3 {
