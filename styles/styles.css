@@ -269,6 +269,7 @@ em, button {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -277,25 +278,50 @@ html {
   margin: 0 auto;
 }
 
+.start,
+.enter {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #006241;
+  border: 2px solid #ffff;
+  color: #ffff;
+}
+
+.start:hover,
+.enter:hover {
+  border: 5px solid #ffff;
+  font-size: 3rem;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.start:hover::after,
+.enter:hover::after {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
 .landing {
-  background-image: url(../images/exterior6.jpg);
+  background-image: url(../images/exterior10.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  position: relative;
 }
 
-.landing .landing-content {
-  text-align: center;
+.landing .landingButton {
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 230px;
+  left: 260px;
+  -webkit-transform: rotate(-0.5deg);
+          transform: rotate(-0.5deg);
+}
+
+.landing .enter {
+  border-color: #362415;
 }
 
 .mainPage header .wrapper {
@@ -364,27 +390,6 @@ html {
   line-height: normal;
 }
 
-.mainPage .headerContent .start {
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #006241;
-  border: 2px solid #ffff;
-  color: #ffff;
-}
-
-.mainPage .headerContent .start:hover {
-  border: 5px solid #ffff;
-  font-size: 3rem;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.mainPage .headerContent .start:hover::after {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
 .questions {
   background-color: #362415;
   text-align: center;
@@ -392,7 +397,7 @@ html {
   background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  height: 1300px;
   padding: 80px 0;
 }
 
@@ -407,7 +412,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 800px;
+  height: 1000px;
 }
 
 .questions form {

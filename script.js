@@ -14,7 +14,7 @@ $(document).ready(function () {
                 $('.mainPage').show()
 
                 let typed = new Typed('#typed', {
-                    strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options, if you\'d like.', 'Just press button button below and we\'ll get right to it!'],
+                    strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options.', 'Just press button button below and we\'ll get right to it!'],
                     backSpeed: 20,
                     typeSpeed: 20,
                     startDelay: 2000
@@ -22,7 +22,12 @@ $(document).ready(function () {
             })
     
         
-        $('.landing').show(); 
+    // $('.landing').show(); 
+    $('#start').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('.questions'). offset().top
+        },1000)
+    })
     
 });
 
