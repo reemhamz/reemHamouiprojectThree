@@ -263,9 +263,23 @@ em, button {
   font-weight: 700;
 }
 
+@media (max-width: 880px) {
+  .headerContent .typedStrings p {
+    font-size: 3rem;
+  }
+  .headerContent .typedStrings span {
+    font-size: 2rem;
+  }
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  display: block;
 }
 
 .wrapper {
@@ -300,6 +314,12 @@ button:hover {
 button:hover::after {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+@media (max-width: 880px) {
+  button {
+    font-size: 1.9rem;
+  }
 }
 
 .landing {
@@ -346,10 +366,11 @@ button:hover::after {
   }
   .landing .landingButton .enter {
     margin: 0 auto;
+    border-color: #ffff;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 880px) {
   .landing {
     background-image: url(../images/exterior-small.jpg);
     -webkit-box-orient: vertical;
@@ -363,22 +384,16 @@ button:hover::after {
   }
 }
 
-.mainPage header {
+header {
   background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
   text-align: center;
+  padding-top: 40px;
 }
 
-.mainPage header .headerContent {
-  background-image: url(../images/bubble3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-  height: 80vh;
-  width: 50%;
-  padding-top: 60px;
+header .baristaBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,31 +401,127 @@ button:hover::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.mainPage header .headerContent h1 {
-  color: #006241;
+header .baristaBar .headerContent {
+  height: 80vh;
 }
 
-.mainPage header .headerContent p {
+@media (max-width: 1000px) {
+  header .baristaBar .headerContent {
+    width: 65%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-position: bottom;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 880px) {
+  header .baristaBar .headerContent {
+    width: 70%;
+  }
+}
+
+@media (max-width: 750px) {
+  header .baristaBar .headerContent {
+    width: 85%;
+  }
+  header .baristaBar .headerContent .start {
+    width: auto;
+  }
+}
+
+@media (max-width: 580px) {
+  header .baristaBar .headerContent {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  header .baristaBar .headerContent .start {
+    margin-top: 150px;
+  }
+}
+
+header .headerContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerContent .bubble {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .headerContent .bubble .typedStrings {
+  padding: 60px 80px;
+  background-image: url(../images/bubble3.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+header .headerContent .bubble .typedStrings p {
   color: #8f4426;
   text-shadow: 2px 2px #000;
 }
 
-.mainPage header .headerContent span {
-  color: #8f4426;
-}
-
-.mainPage .headerContent .typedStrings {
-  width: 60%;
-  margin: 0 auto;
-}
-
-.mainPage .headerContent .typedStrings span {
+header .headerContent .bubble .typedStrings span {
+  color: #362415;
   line-height: normal;
+}
+
+@media (max-width: 1090px) {
+  header .headerContent .bubble .typedStrings p {
+    font-size: 3rem;
+  }
+  header .headerContent .bubble .typedStrings span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  header .headerContent .bubble .typedStrings p {
+    font-size: 2rem;
+  }
+  header .headerContent .bubble .typedStrings span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 460px) {
+  header .headerContent .bubble .typedStrings {
+    padding-bottom: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+header .headerContent .bubble .start {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .questions {
@@ -503,6 +614,7 @@ input[type="radio"]:checked + label {
   -webkit-box-shadow: 15px 15px 0px 0px #006241;
           box-shadow: 15px 15px 0px 0px #006241;
   padding: 30px;
+  display: none;
 }
 
 .getCoffee input[type="submit"]:hover {

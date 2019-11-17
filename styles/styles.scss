@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+  width: 100%;
+  display: block;
+}
+
 // Wrapper styling
 .wrapper {
   max-width: 1240px;
@@ -41,6 +46,9 @@ button {
       transition: 0.5s ease;
     }
   }
+  @include mqBigPhone {
+    font-size: 1.9rem;
+  }
 }
 
 // Landing page styling
@@ -59,12 +67,10 @@ button {
     left: 230px;
     animation-duration: 1.5s;
     transform: rotate(-0.5deg);
-    // padding: 80px;
   }
   .enter {
     border-color: $coffee;
     width: 100%;
-    // padding: 0 30px;
   }
 }
 
@@ -80,6 +86,7 @@ button {
       width: 50%;
       .enter {
         margin: 0 auto;
+        border-color: $white;
       }
     }
   }
@@ -94,56 +101,104 @@ button {
   }
 }
 
-.mainPage {
-  header {
-    .wrapper {
-      // margin: 0 30px;
-      // width: 50%;
-    }
-  }
+// Barista Bar styling
+header {
+  background-image: url(../images/barista.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 40px;
+  .baristaBar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-  header {
-    background-image: url(../images/barista.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // just
-    // justify-content: flex-end;
-    // align-items: flex-end;
     .headerContent {
-      background-image: url(../images/bubble3.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top;
+      // background-image: url(../images/bubble3.png);
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      // background-position: top;
       height: 80vh;
-      width: 50%;
-      padding-top: 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      h1 {
-        color: $starbucksGreen;
+      // width: 55%;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+      // align-items: flex-end;
+      @include mqTablet {
+        width: 65%;
+        justify-content: space-between;
+        background-position: bottom;
+        flex-direction: column-reverse;
+        padding-bottom: 60px;
       }
-      p {
-        color: $lightCoffee;
-        text-shadow: 2px 2px $black;
+      @include mqBigPhone {
+        width: 70%;
       }
-      span {
-        color: $lightCoffee;
-        // text-shadow: 2px 2px $white;
+      @include mqMediumPhone {
+        width: 85%;
+        .start {
+          width: auto;
+        }
+      }
+      @include mqSmallPhone {
+        width: 100%;
+        padding-bottom: 0;
+        .start {
+          margin-top: 150px;
+        }
       }
     }
   }
 
   .headerContent {
-    .typedStrings {
-      width: 60%;
-      margin: 0 auto;
-      span {
-        line-height: normal;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .bubble {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      .typedStrings {
+        padding: 60px 80px;
+        background-image: url(../images/bubble3.png);
+        background-size: cover;
+        background-position: center center;
+        p {
+          color: $lightCoffee;
+          text-shadow: 2px 2px $black;
+        }
+        span {
+          color: $coffee;
+          line-height: normal;
+        }
+        @include mqBigTablet {
+          p {
+            font-size: 3rem;
+          }
+          span {
+            font-size: 2.5rem;
+          }
+        }
+        @include mqSmallPhone {
+          p {
+            font-size: 2rem;
+          }
+          span {
+            font-size: 1.8rem;
+          }
+        }
+        @include mqVerySmallPhone {
+          padding-bottom: 10px;
+          justify-content: space-around;
+        }
+      }
+      .start{
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 30px;
       }
     }
   }
@@ -229,6 +284,7 @@ input[type="radio"]:checked + label {
     text-shadow: 4px 4px $starbucksGreen;
     box-shadow: 15px 15px 0px 0px $starbucksGreen;
     padding: 30px;
+    display: none;
 
     &:hover {
       // color: $caramel;

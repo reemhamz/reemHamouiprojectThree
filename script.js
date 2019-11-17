@@ -8,13 +8,13 @@ $(document).ready(function () {
     // $('.landing').show();
     // $('.mainPage').hide();
 
-    //on button click, landing page disappears and the rest of the content shows
-    $('button').on('click', function () {
-        $('.landing').hide(1000)
-        $('.mainPage').show()
+    // //on button click, landing page disappears and the rest of the content shows
+    // $('button').on('click', function () {
+    //     $('.landing').hide(1000)
+    //     $('.mainPage').show()
 
         let typed = new Typed('#typed', {
-            strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the button below.'],
+            strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the start button!'],
             backSpeed: 20,
             typeSpeed: 20,
             startDelay: 2000
