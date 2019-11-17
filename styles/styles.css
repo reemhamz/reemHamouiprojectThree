@@ -237,19 +237,20 @@ button {
   padding-top: 10px;
 }
 
+label,
+em,
+button {
+  font-family: "Varela Round", sans-serif;
+}
+
 textarea,
 a,
 li,
-span, input, label {
-  font-family: "Varela Round", sans-serif;
+span,
+input, label {
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
-}
-
-label,
-em, button {
-  font-family: "Varela Round", sans-serif;
 }
 
 .headerContent .typedStrings span {
@@ -363,8 +364,8 @@ button:hover::after {
   .landing .landingButton {
     position: static;
     width: 50%;
-  }
-  .landing .landingButton .enter {
+    -webkit-transform: none;
+            transform: none;
     margin: 0 auto;
     border-color: #ffff;
   }
@@ -501,7 +502,7 @@ header .headerContent .bubble .typedStrings span {
   font-size: 2rem;
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1200px) {
   header .headerContent .bubble .typedStrings p {
     font-size: 3rem;
   }
@@ -532,7 +533,6 @@ header .headerContent .bubble .start {
   background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
-  height: 1300px;
   padding: 80px 0;
 }
 
@@ -547,38 +547,100 @@ header .headerContent .bubble .start {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 1000px;
 }
 
-.questions form {
+form {
   border-radius: 5px;
 }
 
-.questions form .userQuestions {
-  padding: 40px;
-}
-
-.questions form .userQuestions h3 {
-  line-height: 0;
-  padding-bottom: 20px;
-  color: #eac784;
-  text-shadow: 4px 4px #362415;
-}
-
 form fieldset {
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 20px;
   border-style: none;
   background-color: #006241;
-  width: 90%;
+  width: 80%;
+  padding: 20px;
+}
+
+@media (max-width: 750px) {
+  form fieldset {
+    width: 80%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 750px) {
+  form fieldset .userQuestions {
+    padding-bottom: 25px;
+  }
 }
 
 form fieldset .userQuestions h3 {
+  color: #eac784;
+  text-shadow: 4px 4px #362415;
   width: 100%;
+  line-height: 1.2;
+}
+
+@media (max-width: 750px) {
+  form fieldset .userQuestions h3 {
+    font-size: 3rem;
+    padding-bottom: 0;
+    line-height: 1.2;
+  }
 }
 
 form fieldset .userQuestions .userChoices {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+form fieldset .userQuestions .userChoices label {
+  margin: 10px;
+}
+
+form fieldset .userQuestions .userChoices input {
+  width: 1px;
+  position: absolute;
+}
+
+form fieldset .userQuestions .seasonUserChoices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 750px) {
+  form fieldset .userQuestions .seasonUserChoices {
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+form fieldset .userQuestions .seasonUserChoices label {
+  width: 100%;
+  margin: 10px;
 }
 
 input[type="radio"] {
@@ -631,6 +693,12 @@ input[type="text"] {
   border-radius: 5px;
   text-align: center;
   padding: 8px 0;
+}
+
+@media (max-width: 750px) {
+  input[type="text"] {
+    width: 90%;
+  }
 }
 
 .userResult {

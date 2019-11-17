@@ -1,6 +1,6 @@
 
 @mixin mqBigTablet{
-    @media(max-width: 1090px){
+    @media(max-width: 1200px){
         @content;
     }
 }

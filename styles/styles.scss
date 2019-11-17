@@ -84,10 +84,9 @@ button {
     .landingButton {
       position: static;
       width: 50%;
-      .enter {
-        margin: 0 auto;
-        border-color: $white;
-      }
+      transform: none;
+      margin: 0 auto;
+      border-color: $white;
     }
   }
 }
@@ -109,7 +108,7 @@ header {
   height: 100vh;
   text-align: center;
   padding-top: 40px;
-  @include mqSmallPhone{
+  @include mqSmallPhone {
     background-position: 40% center;
   }
   .baristaBar {
@@ -131,7 +130,7 @@ header {
       }
       @include mqMediumPhone {
         width: 85%;
-        
+
         .start {
           width: auto;
         }
@@ -156,10 +155,7 @@ header {
       flex-direction: column;
       max-width: 400px;
       .typedStrings {
-        // padding: 60px 100px;
         background-image: url(../images/bubble3.png);
-        // background-size: cover;
-        // background-size: 100% 100%;
         background-size: contain;
         background-repeat: no-repeat;
         padding: 60px;
@@ -192,7 +188,7 @@ header {
           }
         }
       }
-      .start{
+      .start {
         width: 50%;
         margin: 0 auto;
         margin-top: 30px;
@@ -208,43 +204,74 @@ header {
   background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
-  height: 1300px;
+  // height: 1700px;
   padding: 80px 0;
   .drinkQuestions {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 1000px;
-  }
-
-  form {
-    border-radius: 5px;
-    .userQuestions {
-      padding: 40px;
-      h3 {
-        line-height: 0;
-        padding-bottom: 20px;
-        color: $caramel;
-        text-shadow: 4px 4px $coffee;
-      }
-    }
+    // height: 1000px;
   }
 }
 
 form {
+  border-radius: 5px;
   fieldset {
-    margin: 0 auto;
+    margin: 20px auto;
     border-radius: 20px;
     border-style: none;
     background-color: $starbucksGreen;
-    width: 90%;
-
+    width: 80%;
+    padding: 20px;
+    @include mqMediumPhone {
+      width: 80%;
+      padding: 5px;
+    }
     .userQuestions {
-      h3 {
-        width: 100%;
+      @include mqMediumPhone{
+        padding-bottom: 25px;
       }
+      h3 {
+        color: $caramel;
+        text-shadow: 4px 4px $coffee;
+        width: 100%;
+        line-height: 1.2;
+        @include mqMediumPhone {
+          font-size: 3rem;
+          padding-bottom: 0;
+          line-height: 1.2;
+        }
+      }
+
       .userChoices {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        label {
+          margin: 10px;
+          @include mqMediumPhone {
+          }
+        }
+        input {
+          width: 1px;
+          position: absolute;
+        }
+      }
+      .seasonUserChoices {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include mqMediumPhone {
+          width: 50%;
+          flex-direction: column;
+          margin: 0 auto;
+        }
+        label {
+          width: 100%;
+          margin: 10px;
+        }
       }
     }
   }
@@ -281,7 +308,6 @@ input[type="radio"]:checked + label {
     text-shadow: 4px 4px $starbucksGreen;
     box-shadow: 15px 15px 0px 0px $starbucksGreen;
     padding: 30px;
-    // display: none;
 
     &:hover {
       // color: $caramel;
@@ -289,6 +315,9 @@ input[type="radio"]:checked + label {
       border-color: $lightCoffee;
       text-shadow: 4px 4px $lightCoffee;
       box-shadow: 15px 15px 0px 0px $lightCoffee;
+    }
+    @include mqMediumPhone{
+      
     }
   }
 }
@@ -298,6 +327,9 @@ input[type="text"] {
   border-radius: 5px;
   text-align: center;
   padding: 8px 0;
+  @include mqMediumPhone{
+    width: 90%;
+  }
 }
 
 .userResult {
@@ -310,14 +342,13 @@ input[type="text"] {
     display: flex;
     flex-direction: row-reverse;
     flex-direction: column;
-    
   }
 
   .resultImage {
-      background-image: url(../images/frapp2.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 50vh;
-    }
+    background-image: url(../images/frapp2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+  }
 }
