@@ -57,7 +57,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 110vh;
+  height: 100vh;
   position: relative;
   .landingButton {
     width: 30%;
@@ -109,22 +109,16 @@ header {
   height: 100vh;
   text-align: center;
   padding-top: 40px;
+  @include mqSmallPhone{
+    background-position: 40% center;
+  }
   .baristaBar {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
     .headerContent {
-      // background-image: url(../images/bubble3.png);
-      // background-size: contain;
-      // background-repeat: no-repeat;
-      // background-position: top;
       height: 80vh;
-      // width: 55%;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: space-between;
-      // align-items: flex-end;
       @include mqTablet {
         width: 65%;
         justify-content: space-between;
@@ -137,6 +131,7 @@ header {
       }
       @include mqMediumPhone {
         width: 85%;
+        
         .start {
           width: auto;
         }
@@ -157,29 +152,35 @@ header {
     justify-content: flex-end;
     align-items: center;
     .bubble {
-      position: relative;
-      z-index: 2;
       display: flex;
       flex-direction: column;
+      max-width: 400px;
       .typedStrings {
-        padding: 60px 80px;
+        // padding: 60px 100px;
         background-image: url(../images/bubble3.png);
-        background-size: cover;
+        // background-size: cover;
+        // background-size: 100% 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 60px;
         background-position: center center;
         p {
           color: $lightCoffee;
           text-shadow: 2px 2px $black;
+          margin: 10px 0;
+          font-size: 3rem;
         }
         span {
           color: $coffee;
           line-height: normal;
+          font-size: 2rem;
         }
         @include mqBigTablet {
           p {
             font-size: 3rem;
           }
           span {
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
         }
         @include mqSmallPhone {
@@ -189,10 +190,6 @@ header {
           span {
             font-size: 1.8rem;
           }
-        }
-        @include mqVerySmallPhone {
-          padding-bottom: 10px;
-          justify-content: space-around;
         }
       }
       .start{
@@ -284,7 +281,7 @@ input[type="radio"]:checked + label {
     text-shadow: 4px 4px $starbucksGreen;
     box-shadow: 15px 15px 0px 0px $starbucksGreen;
     padding: 30px;
-    display: none;
+    // display: none;
 
     &:hover {
       // color: $caramel;
@@ -313,12 +310,14 @@ input[type="text"] {
     display: flex;
     flex-direction: row-reverse;
     flex-direction: column;
-    .resultImage {
+    
+  }
+
+  .resultImage {
       background-image: url(../images/frapp2.png);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       height: 50vh;
     }
-  }
 }
