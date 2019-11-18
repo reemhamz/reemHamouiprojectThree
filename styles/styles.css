@@ -698,8 +698,8 @@ input[type="radio"]:checked + label {
 .getCoffee input[type="submit"]:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #8f4426;
   border-color: #8f4426;
-  text-shadow: 4px 4px #8f4426;
   -webkit-box-shadow: 15px 15px 0px 0px #8f4426;
           box-shadow: 15px 15px 0px 0px #8f4426;
 }

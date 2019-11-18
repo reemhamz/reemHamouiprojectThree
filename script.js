@@ -401,7 +401,9 @@ $(function () { //results function
                 return true;
             }
         })
-        
+        $('html, body').animate({
+            scrollTop: $('.coffeeBases').offset().top
+        })
     })
 
     //choosing coffee base
@@ -411,9 +413,7 @@ $(function () { //results function
             const trueCoffee = $('input[type=radio][name=answerTwo][value=true]:checked').val() == 'true';
 
             const falseCoffee = $('input[type=radio][name=answerTwo][value=false]:checked').val() == 'false';
-
             
-
             if (trueCoffee === iCaffeine.coffeeBase) {
 
                 return true;
@@ -421,6 +421,10 @@ $(function () { //results function
 
             
         })
+        
+        $('html, body').animate({
+            scrollTop: $('.tempChoices').offset().top
+        });
     
     })
     //choosing temperature of drink
@@ -437,6 +441,11 @@ $(function () { //results function
             }
             
         })
+        
+        $('html, body').animate({
+            scrollTop: $('.name').offset().top
+        });
+
 
         //error message if you choose a hot drink within the summer season
         if ($('input[type=radio][name=answerThree][value=hot]:checked').val() && $('input[type=radio][name=answerOne][value=summer]:checked').val()) {
