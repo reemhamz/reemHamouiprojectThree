@@ -60,12 +60,12 @@ button {
   height: 100vh;
   position: relative;
   @include mqBigPhone {
-  .landing {
+  
     background-image: url(../images/exterior-small.jpg);
     flex-direction: column;
     justify-content: center;
     padding-top: 100px;
-  }
+  
 }
   .landingButton {
     width: 30%;
@@ -151,12 +151,10 @@ header {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     .bubble {
       display: flex;
       flex-direction: column;
-      // justify-content: flex-end;
-      // align-items: flex-end;
       max-width: 400px;
       .typedStrings {
         background-image: url(../images/bubble3.png);
