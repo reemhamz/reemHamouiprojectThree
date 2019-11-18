@@ -14,8 +14,8 @@ $(document).ready(function () {
         $('.mainPage').show()
 
         let typed = new Typed('#typed', {
-            strings: ['Hello, and welcome to Starbucks!', 'We specialize in seasonal drinks.', 'I can help you narrow down a few options. Press the start button!'],
-            backSpeed: 20,
+            strings: ['Hello, and welcome to Starbucks!^1000' , 'We specialize in seasonal drinks.^1000', 'I can help you narrow down a few options. Press the start button!'],
+            backSpeed: 5,
             typeSpeed: 20,
             startDelay: 2000
         })
@@ -23,10 +23,17 @@ $(document).ready(function () {
 
 
     // $('.landing').show(); 
-    $('#start').on('click', function () {
+    $('#start').on('click', function (event) {
+        event.preventDefault();
         $('html, body').animate({
             scrollTop: $('.questions').offset().top
         }, 1000)
+    })
+
+    $('#getCoffee').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('.userResult').offset().top
+        },1000)
     })
 
 });
@@ -217,7 +224,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'fall',
         temperature: 'cold',
-        type: 'latté'
+        type: 'iced latté'
     },
     {
         name: 'Tie Dye Frappuccino',
@@ -304,7 +311,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
-        type: 'frappuccino'
+        type: 'matcha frappuccino'
     },
     {
         name: 'Hazelnut Mocha Macchiato',
@@ -320,7 +327,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'cold',
-        type: 'latte'
+        type: 'iced latte'
     },
     {
         name: 'Decaf Hazelnut Mocha Macchiato',
@@ -336,7 +343,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
-        type: 'latte'
+        type: 'iced latte'
     },
     {
         name: 'Cinammon Macchiato',
@@ -352,7 +359,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'cold',
-        type: 'latte'
+        type: 'iced latte'
     },
     {
         name: 'Decaf Cinammon Macchiato',
@@ -368,7 +375,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
-        type: 'latte'
+        type: 'iced latte'
     },
     {
         name: 'Ice Blond Café Americano',
@@ -477,10 +484,15 @@ $(function () { //results function
             $('.resultContent').html(`<h3>You should have 
             the ${randomDrink.name}</h3>`);
 
+            console.log('this is the type', randomDrink.type);
+
+            const imagePath = 'images/' + randomDrink.type + '.png';
+            $('.drinkImage').attr('src', imagePath);
+
             let userName = $('input[type=text][name=answerFour]').val();
             console.log('this is the customer name',userName)
             
-            $('.resultImage').html(`<p>${userName}</p>`);
+            $('.resultImage').append(`${imagePath}`);
         })
     })
 });

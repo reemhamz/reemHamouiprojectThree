@@ -384,7 +384,7 @@ button:hover::after {
   }
 }
 
-header {
+.baristaStation {
   background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
@@ -394,12 +394,12 @@ header {
 }
 
 @media (max-width: 580px) {
-  header {
+  .baristaStation {
     background-position: 40% center;
   }
 }
 
-header .baristaBar {
+.baristaStation .baristaBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,12 +415,12 @@ header .baristaBar {
           align-items: flex-end;
 }
 
-header .baristaBar .headerContent {
+.baristaStation .baristaBar .headerContent {
   height: 80vh;
 }
 
 @media (max-width: 1000px) {
-  header .baristaBar .headerContent {
+  .baristaStation .baristaBar .headerContent {
     width: 65%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -435,31 +435,31 @@ header .baristaBar .headerContent {
 }
 
 @media (max-width: 880px) {
-  header .baristaBar .headerContent {
+  .baristaStation .baristaBar .headerContent {
     width: 70%;
   }
 }
 
 @media (max-width: 750px) {
-  header .baristaBar .headerContent {
+  .baristaStation .baristaBar .headerContent {
     width: 85%;
   }
-  header .baristaBar .headerContent .start {
+  .baristaStation .baristaBar .headerContent .start {
     width: auto;
   }
 }
 
 @media (max-width: 580px) {
-  header .baristaBar .headerContent {
+  .baristaStation .baristaBar .headerContent {
     width: 100%;
     padding-bottom: 0;
   }
-  header .baristaBar .headerContent .start {
+  .baristaStation .baristaBar .headerContent .start {
     margin-top: 150px;
   }
 }
 
-header .headerContent {
+.baristaStation .headerContent {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -472,7 +472,7 @@ header .headerContent {
           align-items: flex-end;
 }
 
-header .headerContent .bubble {
+.baristaStation .headerContent .bubble {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,7 +483,7 @@ header .headerContent .bubble {
   max-width: 400px;
 }
 
-header .headerContent .bubble .typedStrings {
+.baristaStation .headerContent .bubble .typedStrings {
   background-image: url(../images/bubble3.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -491,38 +491,38 @@ header .headerContent .bubble .typedStrings {
   background-position: center center;
 }
 
-header .headerContent .bubble .typedStrings p {
+.baristaStation .headerContent .bubble .typedStrings p {
   color: #8f4426;
   text-shadow: 2px 2px #000;
   margin: 10px 0;
   font-size: 3rem;
 }
 
-header .headerContent .bubble .typedStrings span {
+.baristaStation .headerContent .bubble .typedStrings span {
   color: #362415;
   line-height: normal;
   font-size: 2rem;
 }
 
 @media (max-width: 1200px) {
-  header .headerContent .bubble .typedStrings p {
+  .baristaStation .headerContent .bubble .typedStrings p {
     font-size: 3rem;
   }
-  header .headerContent .bubble .typedStrings span {
+  .baristaStation .headerContent .bubble .typedStrings span {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 580px) {
-  header .headerContent .bubble .typedStrings p {
+  .baristaStation .headerContent .bubble .typedStrings p {
     font-size: 2rem;
   }
-  header .headerContent .bubble .typedStrings span {
+  .baristaStation .headerContent .bubble .typedStrings span {
     font-size: 1.8rem;
   }
 }
 
-header .headerContent .bubble .start {
+.baristaStation .headerContent .bubble .start {
   width: 50%;
   margin: 0 auto;
   margin-top: 30px;
