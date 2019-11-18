@@ -401,7 +401,7 @@ $(function () { //results function
                 return true;
             }
         })
-        console.log('this is the filtered season array', filteredSeason)
+        
     })
 
     //choosing coffee base
@@ -412,16 +412,16 @@ $(function () { //results function
 
             const falseCoffee = $('input[type=radio][name=answerTwo][value=false]:checked').val() == 'false';
 
-            console.log('this is the TRUE COFFEE', trueCoffee)
+            
 
             if (trueCoffee === iCaffeine.coffeeBase) {
 
                 return true;
             }
 
-            console.log('this is caffeine-choice array', iCaffeine);
+            
         })
-        console.log('this is the filtered array with season and coffee', filteredCaffeine)
+    
     })
     //choosing temperature of drink
     $('.tempChosen').on('click', function () {
@@ -435,7 +435,7 @@ $(function () { //results function
 
                 return true;
             }
-            console.log('temperature array', iTemp)
+            
         })
 
         //error message if you choose a hot drink within the summer season
@@ -445,9 +445,10 @@ $(function () { //results function
                 title: 'Sorry! There are no hot seasonal drinks for the summer.',
                 text: 'How about you choose something else?',
                 icon: 'error',
+                // imageSize: '600x600',
                 confirmButtonText: 'Try again!'
-
             })
+
             $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
 
         }
