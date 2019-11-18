@@ -33,15 +33,14 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  // border: 2px solid cyan;
+  @include mqTablet {
+    .wrapper {
+      width: 100%;
+    }
+  }
 }
 
 // Wrapper media query
-@include mqTablet {
-  .wrapper {
-    width: 100%;
-  }
-}
 
 // Button designs
 button {

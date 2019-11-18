@@ -2,8 +2,7 @@
 @import "colors";
 
 * {
-  font-family: "Source Sans Pro", sans-serif;
-  // font-weight: 200;
+  font-family: 'Tajawal', sans-serif;
 }
 
 h1 {
@@ -42,7 +41,7 @@ button {
 label,
 em,
 button {
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Tajawal', sans-serif;
 }
 
 textarea,
@@ -50,6 +49,7 @@ a,
 li,
 span,
 input, label, p {
+  font-family: 'Tajawal', sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
@@ -59,11 +59,9 @@ input, label, p {
   .typedStrings {
     span {
       font-size: 3rem;
-      font-family: "Varela Round", sans-serif;
     }
     p {
       font-size: 4rem;
-      font-family: "Varela Round", sans-serif;
       font-weight: 700;
     }
     @include mqBigPhone {
@@ -77,6 +75,3 @@ input, label, p {
   }
 }
 
-footer{
-
-}

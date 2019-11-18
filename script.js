@@ -413,19 +413,19 @@ $(function () { //results function
             const trueCoffee = $('input[type=radio][name=answerTwo][value=true]:checked').val() == 'true';
 
             const falseCoffee = $('input[type=radio][name=answerTwo][value=false]:checked').val() == 'false';
-            
+
             if (trueCoffee === iCaffeine.coffeeBase) {
 
                 return true;
             }
 
-            
+
         })
-        
+
         $('html, body').animate({
             scrollTop: $('.tempChoices').offset().top
         });
-    
+
     })
     //choosing temperature of drink
     $('.tempChosen').on('click', function () {
@@ -439,9 +439,9 @@ $(function () { //results function
 
                 return true;
             }
-            
+
         })
-        
+
         $('html, body').animate({
             scrollTop: $('.name').offset().top
         });
@@ -457,12 +457,13 @@ $(function () { //results function
             })
 
             $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
-
         }
+
+
         //randomizer function
         $('input[type=submit]').on('click', function (event) {
-            let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)];
 
+            let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)];
             event.preventDefault();
 
             //appends image of drink to results page
@@ -473,6 +474,7 @@ $(function () { //results function
 
             $('.resultContent').html(`<h4>${userName}, I think you should have 
             the ${randomDrink.name}</h4>`);
+
 
 
         })
