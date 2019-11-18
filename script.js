@@ -2,17 +2,16 @@ $(document).ready(function () {
     $('input[type=radio]').attr('checked', false);
     $('input[type=text').val('');
 
-
-
-    // // landing page to show and hide everything else
+    //landing page to show and hide everything else
     $('.landing').show();
     $('.mainPage').hide();
     $('.userResult').hide();
 
     //on button click, landing page disappears and the rest of the content shows
     $('.enter').on('click', function () {
-        $('.landing').hide(1000)
-        $('.mainPage').show()
+        $('.landing').hide(1000);
+        $('.mainPage').show(1000);
+
 
 
         let typed = new Typed('#typed', {
@@ -164,7 +163,7 @@ const seasonalDrinks = [{
         type: 'latté'
     },
     {
-        name: 'Cinammon Dolcé Latte',
+        name: 'Cinammon Dolcé latté',
         flavourProfile: 'earthy',
         coffeeBase: true,
         season: 'fall',
@@ -172,7 +171,7 @@ const seasonalDrinks = [{
         type: 'latté'
     },
     {
-        name: 'Decaf Cinammon Dolcé Latte',
+        name: 'Decaf Cinammon Dolcé latté',
         flavourProfile: 'earthy',
         coffeeBase: false,
         season: 'fall',
@@ -288,7 +287,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'hot',
-        type: 'latte'
+        type: 'latté'
     },
     {
         name: 'Matcha Green Tea Frappuccino',
@@ -304,7 +303,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'hot',
-        type: 'latte'
+        type: 'latté'
     },
     {
         name: 'Iced Hazelnut Mocha Macchiato',
@@ -312,7 +311,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'cold',
-        type: 'iced latte'
+        type: 'iced latté'
     },
     {
         name: 'Decaf Hazelnut Mocha Macchiato',
@@ -320,7 +319,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'hot',
-        type: 'latte'
+        type: 'latté'
     },
     {
         name: 'Decaf Iced Hazelnut Mocha Macchiato',
@@ -328,7 +327,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
-        type: 'iced latte'
+        type: 'iced latté'
     },
     {
         name: 'Cinammon Macchiato',
@@ -336,7 +335,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'hot',
-        type: 'latte'
+        type: 'latté'
     },
     {
         name: 'Iced Cinammon Macchiato',
@@ -344,7 +343,7 @@ const seasonalDrinks = [{
         coffeeBase: true,
         season: 'spring',
         temperature: 'cold',
-        type: 'iced latte'
+        type: 'iced latté'
     },
     {
         name: 'Decaf Cinammon Macchiato',
@@ -352,7 +351,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'hot',
-        type: 'latte'
+        type: 'latté'
     },
     {
         name: 'Iced Decaf Cinammon Macchiato',
@@ -360,7 +359,7 @@ const seasonalDrinks = [{
         coffeeBase: false,
         season: 'spring',
         temperature: 'cold',
-        type: 'iced latte'
+        type: 'iced latté'
     },
     {
         name: 'Ice Blond Café Americano',
@@ -453,7 +452,8 @@ $(function () { //results function
             Swal.fire({
                 title: 'Sorry! There are no hot seasonal drinks for the summer.',
                 icon: 'error',
-                confirmButtonText: 'Try again!'
+                confirmButtonText: 'Try again!',
+                customClass: 'swalBox',
             })
 
             $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)

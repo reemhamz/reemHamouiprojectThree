@@ -307,6 +307,19 @@ img {
   }
 }
 
+.swalBox {
+  height: 300px;
+}
+
+.swalBox h2,
+.swalBox button {
+  font-size: 2rem !important;
+}
+
+.swalBox .swal2-icon {
+  visibility: hidden;
+}
+
 button {
   width: 50%;
   margin: 0 auto;

@@ -40,6 +40,17 @@ img {
   }
 }
 
+.swalBox {
+  height: 300px;
+  h2,
+  button {
+    font-size: 2rem !important;
+  }
+  .swal2-icon {
+    visibility: hidden;
+  }
+}
+
 // Wrapper media query
 
 // Button designs
@@ -285,7 +296,7 @@ form {
   }
 }
 
-.swal2-popup{
+.swal2-popup {
   font-size: 2rem;
 }
 
@@ -383,15 +394,15 @@ input[type="text"] {
   }
 }
 
-footer{
+footer {
   margin: 0 auto;
   text-align: center;
   background-color: $starbucksGreen;
   color: $white;
   padding: 10px 0;
-  p{
+  p {
     margin: 0;
-    @include mqSmallPhone{
+    @include mqSmallPhone {
       font-size: 1.7rem;
     }
   }
