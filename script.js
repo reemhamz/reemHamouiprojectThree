@@ -10,7 +10,7 @@ $(document).ready(function () {
     //on button click, landing page disappears and the rest of the content shows
     $('.enter').on('click', function () {
         $('.landing').hide(1000);
-        $('.mainPage').show(1000);
+        $('.mainPage').show();
 
 
 
@@ -460,8 +460,13 @@ $(function () { //results function
         }
 
 
+
+
         //randomizer function
         $('input[type=submit]').on('click', function (event) {
+
+
+
 
             let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)];
             event.preventDefault();
@@ -475,6 +480,10 @@ $(function () { //results function
             $('.resultContent').html(`<h4>${userName}, I think you should have 
             the ${randomDrink.name}</h4>`);
 
+            if ($('input[type=text]').val("")) {
+                $('.resultContent').html(`<h4> Well stranger, I think you should have 
+            the ${randomDrink.name}</h4>`);
+            }
 
 
         })
