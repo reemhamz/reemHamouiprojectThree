@@ -15,6 +15,19 @@ img {
   display: block;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 // Wrapper styling
 .wrapper {
   max-width: 1240px;
@@ -120,7 +133,7 @@ button {
         width: 65%;
         justify-content: space-between;
         background-position: bottom;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding-bottom: 60px;
         width: 100%;
         display: flex;
@@ -375,5 +388,8 @@ footer{
   padding: 10px 0;
   p{
     margin: 0;
+    @include mqSmallPhone{
+      font-size: 1.7rem;
+    }
   }
 }
