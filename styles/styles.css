@@ -225,7 +225,7 @@ h3 {
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   line-height: 58px;
   letter-spacing: 0.8px;
 }
@@ -247,7 +247,7 @@ textarea,
 a,
 li,
 span,
-input, label {
+input, label, p {
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
@@ -306,7 +306,6 @@ button {
 
 button:hover {
   border: 5px solid #ffff;
-  font-size: 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
 }
@@ -329,11 +328,13 @@ button:hover::after {
   background-position: center -90px;
   height: 100vh;
   position: relative;
+  overflow: scroll;
 }
 
 @media (max-width: 880px) {
   .landing {
     background-image: url(../images/exterior-small.jpg);
+    background-position: center center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -431,6 +432,16 @@ button:hover::after {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding-bottom: 60px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -457,19 +468,6 @@ button:hover::after {
   .baristaStation .baristaBar .headerContent .start {
     margin-top: 150px;
   }
-}
-
-.baristaStation .headerContent {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .baristaStation .headerContent .bubble {
@@ -659,8 +657,8 @@ input[type="radio"]:checked + label {
   background-color: #362415;
   color: #ffff;
   border-color: #362415;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .userResult {
@@ -715,26 +713,60 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 800px;
   padding: 20px 0;
-}
-
-.userResult .resultContent {
+  color: #ffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 750px) {
+  .userResult .resultContent h4 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
 }
 
 .userResult .resultImage {
-  background-image: url(../images/frapp2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 750px) {
+  .userResult .resultImage {
+    height: auto;
+    width: auto;
+  }
+}
+
+.userResult .resultImage .drinkImage {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 580px) {
+  .userResult .restart {
+    width: 80%;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #006241;
+  color: #ffff;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */

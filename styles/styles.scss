@@ -40,7 +40,7 @@ button {
   color: $white;
   &:hover {
     border: 5px solid $white;
-    font-size: 3rem;
+    // font-size: 3rem;
     transition: 0.5s ease;
     &::after {
       transition: 0.5s ease;
@@ -59,14 +59,14 @@ button {
   background-position: center -90px;
   height: 100vh;
   position: relative;
+  overflow: scroll;
   @include mqBigPhone {
-  
     background-image: url(../images/exterior-small.jpg);
+    background-position: center center;
     flex-direction: column;
     justify-content: center;
     padding-top: 100px;
-  
-}
+  }
   .landingButton {
     width: 30%;
     margin: 0 auto;
@@ -83,7 +83,6 @@ button {
 }
 
 // Landing page media queries
-
 @include mqTablet {
   .landing {
     display: flex;
@@ -98,8 +97,6 @@ button {
     }
   }
 }
-
-
 
 // Barista Bar styling
 .baristaStation {
@@ -117,7 +114,6 @@ button {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-
     .headerContent {
       height: 80vh;
       @include mqTablet {
@@ -126,6 +122,10 @@ button {
         background-position: bottom;
         flex-direction: column-reverse;
         padding-bottom: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
       }
       @include mqBigPhone {
         width: 70%;
@@ -148,10 +148,6 @@ button {
   }
 
   .headerContent {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     .bubble {
       display: flex;
       flex-direction: column;
@@ -206,13 +202,11 @@ button {
   background-image: url(../images/coffee-bg3);
   background-size: cover;
   background-position: center;
-  // height: 1700px;
   padding: 80px 0;
   .drinkQuestions {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // height: 1000px;
   }
 }
 
@@ -230,7 +224,7 @@ form {
       padding: 5px;
     }
     .userQuestions {
-      @include mqMediumPhone{
+      @include mqMediumPhone {
         padding-bottom: 25px;
       }
       h3 {
@@ -293,9 +287,8 @@ input[type="radio"]:checked + label {
   background-color: $coffee;
   color: $white;
   border-color: $coffee;
-  transition: 0.5s;
+  transition: 0.3s;
 }
-
 
 .userResult {
   text-align: center;
@@ -305,24 +298,21 @@ input[type="radio"]:checked + label {
   margin: 50px 0;
   input[type="submit"] {
     background-color: $white;
-    // border: 5px solid $starbucksGreen;
     border-style: none;
     color: $starbucksGreen;
-    // text-shadow: 1px 1px $black;
     box-shadow: 15px 15px 0px 0px $starbucksGreen;
     padding: 30px;
 
     &:hover {
-      // color: $caramel;
       transition: 0.3s;
       border-color: $lightCoffee;
       text-shadow: 4px 4px $lightCoffee;
       box-shadow: 15px 15px 0px 0px $lightCoffee;
     }
-    @include mqMediumPhone{
+    @include mqMediumPhone {
       padding: 15px;
       font-size: 2.5rem;
-      box-shadow: 10px 10px 0px 0px $starbucksGreen
+      box-shadow: 10px 10px 0px 0px $starbucksGreen;
     }
   }
 }
@@ -332,7 +322,7 @@ input[type="text"] {
   border-radius: 5px;
   text-align: center;
   padding: 8px 0;
-  @include mqMediumPhone{
+  @include mqMediumPhone {
     width: 90%;
   }
 }
@@ -341,19 +331,49 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 800px;
   padding: 20px 0;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   .resultContent {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-direction: column;
+    h4 {
+      @include mqMediumPhone {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+    }
   }
 
   .resultImage {
-    background-image: url(../images/frapp2.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    @include mqMediumPhone {
+      height: auto;
+      width: auto;
+    }
+    .drinkImage {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  .restart {
+    @include mqSmallPhone {
+      width: 80%;
+    }
+  }
+}
+
+footer{
+  margin: 0 auto;
+  text-align: center;
+  background-color: $starbucksGreen;
+  color: $white;
+  padding: 10px 0;
+  p{
+    margin: 0;
   }
 }
