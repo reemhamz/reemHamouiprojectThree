@@ -287,7 +287,6 @@ img {
   max-width: 1240px;
   width: 90%;
   margin: 0 auto;
-  border: 2px solid cyan;
 }
 
 @media (max-width: 1000px) {
@@ -327,9 +326,23 @@ button:hover::after {
   background-image: url(../images/exterior10.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center -90px;
   height: 100vh;
   position: relative;
+}
+
+@media (max-width: 880px) {
+  .landing .landing {
+    background-image: url(../images/exterior-small.jpg);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 100px;
+  }
 }
 
 .landing .landingButton {
@@ -371,20 +384,6 @@ button:hover::after {
   }
 }
 
-@media (max-width: 880px) {
-  .landing {
-    background-image: url(../images/exterior-small.jpg);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-top: 100px;
-  }
-}
-
 header {
   background-image: url(../images/barista.jpg);
   background-size: cover;
@@ -408,6 +407,9 @@ header .baristaBar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -670,10 +672,9 @@ input[type="radio"]:checked + label {
 }
 
 .getCoffee input[type="submit"] {
-  background-color: rgba(204, 199, 192, 0.9);
+  background-color: #ffff;
   border-style: none;
-  color: #71a95a;
-  text-shadow: 4px 4px #006241;
+  color: #006241;
   -webkit-box-shadow: 15px 15px 0px 0px #006241;
           box-shadow: 15px 15px 0px 0px #006241;
   padding: 30px;
@@ -686,6 +687,15 @@ input[type="radio"]:checked + label {
   text-shadow: 4px 4px #8f4426;
   -webkit-box-shadow: 15px 15px 0px 0px #8f4426;
           box-shadow: 15px 15px 0px 0px #8f4426;
+}
+
+@media (max-width: 750px) {
+  .getCoffee input[type="submit"] {
+    padding: 15px;
+    font-size: 2.5rem;
+    -webkit-box-shadow: 10px 10px 0px 0px #006241;
+            box-shadow: 10px 10px 0px 0px #006241;
+  }
 }
 
 input[type="text"] {
