@@ -443,9 +443,7 @@ $(function () { //results function
 
             Swal.fire({
                 title: 'Sorry! There are no hot seasonal drinks for the summer.',
-                text: 'How about you choose something else?',
                 icon: 'error',
-                // imageSize: '600x600',
                 confirmButtonText: 'Try again!'
             })
 
