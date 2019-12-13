@@ -459,14 +459,8 @@ $(function () { //results function
             $('input[type=radio][name=answerThree][value=hot]').attr('checked', false)
         }
 
-
-
-
         //randomizer function
         $('input[type=submit]').on('click', function (event) {
-
-
-
 
             let randomDrink = filteredTemp[Math.floor(Math.random() * filteredTemp.length)];
             event.preventDefault();
@@ -475,13 +469,17 @@ $(function () { //results function
             const imagePath = 'images/' + randomDrink.type + '.png';
             $('.drinkImage').attr('src', imagePath);
 
-            let userName = $('input[type=text][name=answerFour]').val();
+            const userName = $('input[type=text][name=answerFour]').val();
+            const userNameCap = userName.charAt(0).toUpperCase() + userName.slice(1);
 
-            $('.resultContent').html(`<h4>${userName}, I think you should have 
+            $('.resultContent').html(`<h4>${userName} I think you should have 
             the ${randomDrink.name}</h4>`);
 
-            if ($('input[type=text]').val("")) {
-                $('.resultContent').html(`<h4> Well stranger, I think you should have 
+
+
+            // found an error. will fix this after project submission
+            if ($('input[type=text]').val(" ")) {
+                $('.resultContent').html(`<h4> Well${" "+ userNameCap + ","} I think you should have 
             the ${randomDrink.name}</h4>`);
             }
 

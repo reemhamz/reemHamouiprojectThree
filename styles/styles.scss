@@ -41,7 +41,6 @@ img {
 }
 
 .swal2-popup {
-  // height: 800px;
   h2{
     font-size: 2.5rem !important;
   }
@@ -66,7 +65,6 @@ button {
   color: $white;
   &:hover {
     border: 5px solid $white;
-    // font-size: 3rem;
     transition: 0.5s ease;
     &::after {
       transition: 0.5s ease;
@@ -79,13 +77,13 @@ button {
 
 // Landing page styling
 .landing {
-  background-image: url(../images/exterior10.jpg);
+  background-image: url(../images/exterior9.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -90px;
-  height: 100vh;
-  position: relative;
-  overflow: scroll;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
   @include mqBigPhone {
     background-image: url(../images/exterior-small.jpg);
     background-position: center center;
@@ -94,13 +92,10 @@ button {
     padding-top: 100px;
   }
   .landingButton {
-    width: 30%;
     margin: 0 auto;
-    position: absolute;
-    top: 205px;
-    left: 230px;
-    animation-duration: 1.5s;
-    transform: rotate(-0.5deg);
+    animation-duration: 0.5s;
+    align-self: flex-end;
+    width: 50%;
   }
   .enter {
     border-color: $coffee;
@@ -354,7 +349,7 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 800px;
+  min-height: 100vh;
   padding: 20px 0;
   color: $white;
   display: flex;

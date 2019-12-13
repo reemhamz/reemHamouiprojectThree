@@ -347,13 +347,17 @@ button:hover::after {
 }
 
 .landing {
-  background-image: url(../images/exterior10.jpg);
+  background-image: url(../images/exterior9.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center -90px;
-  height: 100vh;
-  position: relative;
-  overflow: scroll;
+  background-position: center center;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media (max-width: 880px) {
@@ -372,15 +376,12 @@ button:hover::after {
 }
 
 .landing .landingButton {
-  width: 30%;
   margin: 0 auto;
-  position: absolute;
-  top: 205px;
-  left: 230px;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-transform: rotate(-0.5deg);
-          transform: rotate(-0.5deg);
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 50%;
 }
 
 .landing .enter {
@@ -734,7 +735,7 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 800px;
+  min-height: 100vh;
   padding: 20px 0;
   color: #ffff;
   display: -webkit-box;
