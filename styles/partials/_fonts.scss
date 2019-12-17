@@ -11,6 +11,13 @@ h1 {
   color: $starbucksGreen;
   text-shadow: 2px 2px white;
   border-bottom: 5px dotted white;
+  @include mqBigPhone{
+    font-size: 6rem;
+    background-color: rgba(255,255,255,0.6);
+  }
+  @include mqVerySmallPhone{
+    font-size: 5rem;
+  }
 }
 
 h2,
