@@ -6,6 +6,7 @@ $(document).ready(function () {
     $('.landing').show();
     $('.mainPage').hide();
     $('.userResult').hide();
+    $('footer').hide();
 
     //on button click, landing page disappears and the rest of the content shows
     $('.enter').on('click', function () {
@@ -24,6 +25,7 @@ $(document).ready(function () {
 
     $('.getCoffee').on('click', function () {
         $('.userResult').show();
+        $('footer').show();
     })
 
     $('#start').on('click', function (event) {
@@ -490,7 +492,13 @@ $(function () { //results function
             $('input[type=radio]').attr('checked', false)
             $('html, body').animate({
                 scrollTop: $('.drinkQuestions').offset().top
-            }, 1000);
+            }, 800);
+            setTimeout(function () {
+                $('.userResult ').hide()
+            }, 1000)
         })
+        // $('.restart').on('click', setTimeout(function () {
+        //     ;
+        // },1000))
     })
 });

@@ -205,10 +205,11 @@ nav ul li a:hover {
 }
 
 h1 {
-  font-size: 6.9rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 0;
+  font-size: 8rem;
+  font-family: 'Lilita One', cursive;
+  color: #006241;
+  text-shadow: 2px 2px white;
+  border-bottom: 5px dotted white;
 }
 
 h2,
@@ -235,12 +236,25 @@ button {
   text-align: center;
   line-height: 41.6px;
   padding-top: 10px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #006241;
+  color: #ffff;
+  border: 5px solid #ffff;
 }
 
-label,
-em,
-button {
-  font-family: 'Tajawal', sans-serif;
+button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #8f4426;
+  -webkit-box-shadow: 5px 5px 5px black;
+          box-shadow: 5px 5px 5px black;
+}
+
+@media (max-width: 880px) {
+  button {
+    font-size: 1.9rem;
+  }
 }
 
 textarea,
@@ -248,7 +262,6 @@ a,
 li,
 span,
 input, label, p {
-  font-family: 'Tajawal', sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
@@ -270,6 +283,18 @@ input, label, p {
   .headerContent .typedStrings span {
     font-size: 2rem;
   }
+}
+
+ul, li,
+h1, h2,
+h3, h4,
+h5, h6,
+figure,
+p,
+span,
+a {
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -320,44 +345,44 @@ img {
   visibility: hidden;
 }
 
-button {
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: #006241;
-  border: 2px solid #ffff;
-  color: #ffff;
-}
-
-button:hover {
-  border: 5px solid #ffff;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-button:hover::after {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-@media (max-width: 880px) {
-  button {
-    font-size: 1.9rem;
-  }
-}
-
 .landing {
-  background-image: url(../images/exterior9.jpg);
+  background-image: url(../images/brownBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   min-height: 100vh;
+  text-align: center;
+}
+
+.landing .landingContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100vh;
+}
+
+.landing .landingContent h1 {
+  color: #006241;
+}
+
+.landing .landingButton {
+  margin: 0 auto;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  width: 20%;
+}
+
+.landing .landingButton button {
+  border-color: #362415;
+  width: 100%;
+  font-size: 2.8rem;
+  padding-top: 15px;
 }
 
 @media (max-width: 880px) {
@@ -373,20 +398,21 @@ button:hover::after {
             justify-content: center;
     padding-top: 100px;
   }
-}
-
-.landing .landingButton {
-  margin: 0 auto;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  width: 50%;
-}
-
-.landing .enter {
-  border-color: #362415;
-  width: 100%;
+  .landing .landing .landingContent {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 80vh;
+  }
+  .landing .landing .landingContent h1 {
+    font-size: 5rem;
+  }
+  .landing .landing .landingButton {
+    width: 100%;
+  }
+  .landing .landing .landingButton button {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -516,8 +542,7 @@ button:hover::after {
 }
 
 .baristaStation .headerContent .bubble .typedStrings p {
-  color: #8f4426;
-  text-shadow: 2px 2px #000;
+  color: #000;
   margin: 10px 0;
   font-size: 3rem;
 }
@@ -677,6 +702,7 @@ label {
   border: 1px solid #ffff;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + label {
@@ -735,7 +761,7 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  max-height: 95vh;
   padding: 20px 0;
   color: #ffff;
   display: -webkit-box;

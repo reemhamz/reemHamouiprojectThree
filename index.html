@@ -7,34 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/styles.css">
     <link
-        href="https://fonts.googleapis.com/css?family=Varela+Round|Tajawal:400,500,700,800,900|Shadows+Into+Light|Source+Sans+Pro:200,300,400,700,900&display=swap"
+        href="https://fonts.googleapis.com/css?family=Varela+Round|Tajawal:400,500,700,800,900|Shadows+Into+Light|Source+Sans+Pro:200,300,400,700,900|Lilita+One|Varela+Round&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel='icon' href='images/favicon.ico' type='image/x-icon'/>
-    <title>Starbucks Seasonal Drinks Generator</title>
+    <title>Starbucks Seasons</title>
 </head>
 
 <body>
-    <a href="#maincontent" class="skip-link">Skip to main content.</a>
-
+    
     <header class="landing">
-        <div class="landingButton">
-            <!-- <h1>Welcome to Starbucks</h1> -->
 
+        <a href="#maincontent" class="skip-link">Skip to main content.</a>
+
+        <div class="landingContent wrapper">
+        <h1>Starbucks Seasons</h1>
+        <!-- <p>You will be guided through a series of questions by Tom the Barista in order to be recommended a seasonal drinks based on your answers.</p> -->
+        
+
+        <div class="landingButton">
             <button class="enter">
-                Head on inside
+                Head on Inside
             </button>
+        </div>
         </div>
 
     </header>
 
     <!-- start of main section -->
     <main class="mainPage" id="#maincontent">
-
-
         <section class="baristaStation">
             <div class="baristaBar wrapper">
                 <div class="headerContent">
@@ -111,12 +115,10 @@
                     </fieldset>
                     <fieldset class="temp">
                         <div class="tempChoices userQuestions">
-
                             <h3>
                                 Would you like to have a hot or cold drink?
                             </h3>
                             <div class="userChoices">
-
                                 <input type="radio" id="hot" name="answerThree" class="tempChosen" value="hot">
                                 <label for="hot">I haven't burnt my tongue in a <em>hot</em> minute</label>
 
@@ -129,9 +131,9 @@
                     <fieldset class="name">
                         <div class="userQuestions">
                             <h3>Also, what's your name?</h3>
+                            <label for="nameInput" class="visuallyHidden">Input your name below (optional)</label>
                             <input type="text" id="nameInput" name="answerFour" class="nameWritten"
                                 placeholder="Type your name here">
-
                         </div>
                     </fieldset>
 
@@ -139,16 +141,12 @@
 
                 </div>
                 <!--class of drinkQuestions ends-->
-
                 <div class="getCoffee" id="getCoffee">
                     <input type="submit" value="This is what I'd like!">
                 </div>
-
             </form>
         </section>
         <!--End of questions-->
-
-
 
         <section class="userResult">
             <div class="resultContent wrapper">
@@ -161,16 +159,12 @@
             <button class="restart">
                 Nah, let's go again
             </button>
-
         </section>
-
     </main>
     <!--end of main section-->
-
     <footer>
         <p> © Reem Hamoui -- Student @ Juno College</p>
     </footer>
-
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="script.js"></script>

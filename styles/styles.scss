@@ -5,6 +5,18 @@
 @import "partials/colors";
 // @import "partials/button";
 
+ul, li,
+h1, h2,
+h3, h4,
+h5, h6,
+figure,
+p,
+span,
+a {
+    padding: 0;
+    margin: 0;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -56,51 +68,61 @@ img {
 // Wrapper media query
 
 // Button designs
-button {
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px;
-  background-color: $starbucksGreen;
-  border: 2px solid $white;
-  color: $white;
-  &:hover {
-    border: 5px solid $white;
-    transition: 0.5s ease;
-    &::after {
-      transition: 0.5s ease;
-    }
-  }
-  @include mqBigPhone {
-    font-size: 1.9rem;
-  }
-}
+
 
 // Landing page styling
 .landing {
-  background-image: url(../images/exterior9.jpg);
+  background-image: url(../images/brownBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   min-height: 100vh;
+  text-align: center;
+  
+  
+  .landingContent{
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  // align-items: flex-start;
+  height: 100vh;
+    h1{
+      color: $starbucksGreen;
+    }
+  }
+  .landingButton {
+    margin: 0 auto;
+    animation-duration: 0.5s;
+    width: 20%;
+  button {
+    border-color: $coffee;
+    width: 100%;
+    font-size: 2.8rem;
+    padding-top: 15px;
+  }}
   @include mqBigPhone {
     background-image: url(../images/exterior-small.jpg);
     background-position: center center;
     flex-direction: column;
     justify-content: center;
     padding-top: 100px;
+    .landing{
+      .landingContent{
+        justify-content: space-between;
+        height: 80vh;
+        h1{
+          font-size: 5rem;
+        }
+      }
+      .landingButton{
+        width: 100%;
+        button{
+          font-size: 2.2rem;
+        }
+      }
+    }
   }
-  .landingButton {
-    margin: 0 auto;
-    animation-duration: 0.5s;
-    align-self: flex-end;
-    width: 50%;
-  }
-  .enter {
-    border-color: $coffee;
-    width: 100%;
-  }
+
 }
 
 // Landing page media queries
@@ -180,8 +202,7 @@ button {
         padding: 60px;
         background-position: center center;
         p {
-          color: $lightCoffee;
-          text-shadow: 2px 2px $black;
+          color: $black;
           margin: 10px 0;
           font-size: 3rem;
         }
@@ -288,12 +309,12 @@ form {
         label {
           width: 100%;
           margin: 10px;
+          
         }
       }
     }
   }
 }
-
 
 input[type="radio"] {
   visibility: hidden;
@@ -303,6 +324,7 @@ label {
   border: 1px solid $white;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked + label {
@@ -349,7 +371,7 @@ input[type="text"] {
   background-image: url(../images/result-bg.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  max-height: 95vh;
   padding: 20px 0;
   color: $white;
   display: flex;

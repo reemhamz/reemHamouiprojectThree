@@ -6,10 +6,11 @@
 }
 
 h1 {
-  font-size: 6.9rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 0;
+  font-size: 8rem;
+  font-family: 'Lilita One', cursive;
+  color: $starbucksGreen;
+  text-shadow: 2px 2px white;
+  border-bottom: 5px dotted white;
 }
 
 h2,
@@ -36,12 +37,19 @@ button {
   text-align: center;
   line-height: 41.6px;
   padding-top: 10px;
-}
-
-label,
-em,
-button {
-  font-family: 'Tajawal', sans-serif;
+  width: 50%;
+  margin: 0 auto;
+  background-color: $starbucksGreen;
+  color: $white;
+  border: 5px solid $white;
+  &:hover {
+    transition: 0.5s;
+    background-color: $lightCoffee;
+    box-shadow: 5px 5px 5px black;
+  }
+  @include mqBigPhone {
+    font-size: 1.9rem;
+  }
 }
 
 textarea,
@@ -49,7 +57,6 @@ a,
 li,
 span,
 input, label, p {
-  font-family: 'Tajawal', sans-serif;
   font-size: 2rem;
   line-height: 28px;
   letter-spacing: 1px;
