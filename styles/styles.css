@@ -205,11 +205,10 @@ nav ul li a:hover {
 }
 
 h1 {
-  font-size: 8rem;
-  font-family: 'Lilita One', cursive;
-  color: #006241;
-  text-shadow: 2px 2px white;
-  border-bottom: 5px dotted white;
+  font-size: 20rem;
+  color: silver;
+  text-shadow: 5px 5px 5px white;
+  letter-spacing: 15px;
 }
 
 @media (max-width: 880px) {
@@ -229,6 +228,13 @@ h2,
 input[type="submit"] {
   font-size: 4.5rem;
   font-weight: 900;
+}
+
+h2 {
+  font-size: 10rem;
+  display: inline-block;
+  color: #eac784;
+  text-shadow: 4px 4px #362415;
 }
 
 h3 {
@@ -359,7 +365,7 @@ img {
 }
 
 .landing {
-  background-image: url(../images/brownBackground.jpg);
+  background-image: url(../images/header.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -368,6 +374,8 @@ img {
 }
 
 .landing .landingContent {
+  padding-top: 15%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,9 +383,16 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 100vh;
+}
+
+.landing .landingContent h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .landing .landingButton {
@@ -415,6 +430,9 @@ img {
   }
   .landing .landing .landingContent h1 {
     font-size: 5rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .landing .landing .landingButton {
     width: 50%;

@@ -67,17 +67,25 @@ img {
 
 // Landing page styling
 .landing {
-  background-image: url(../images/brownBackground.jpg);
+  background-image: url(../images/header.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
   text-align: center;
   .landingContent{
+  padding-top: 15%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100vh;
+    h2{
+      position: absolute;
+      left: 0;
+      right: 0;
+      
+    }
   }
   .landingButton {
     margin: 0 auto;
@@ -101,6 +109,7 @@ img {
         height: 80vh;
         h1{
           font-size: 5rem;
+          align-self: center;
         }
       }
       .landingButton{
@@ -135,7 +144,7 @@ img {
   background-image: url(../images/barista.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+height: 100vh;
   text-align: center;
   padding-top: 40px;
   @include mqSmallPhone {
