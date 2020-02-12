@@ -366,9 +366,8 @@ img {
 
 .landing {
   background-image: url(../images/header.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-size: contain;
+  background-position: center center fixed;
   min-height: 100vh;
   text-align: center;
 }
